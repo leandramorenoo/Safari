@@ -1,0 +1,88 @@
+:root {
+   /* COLORES PRINCIPALES*/ 
+
+   --color-beige: #FFF6E8;
+   --color-cream:#D8C3A5;
+   --color-dark-green: #1E2B0A;
+   --color-light-green: #808847;
+   --color-brown: #745936;
+   --color-cafe: #3A2519;
+
+    /* COLORES ACENTOS*/ 
+   --color-orange: #B55D3E;
+   --color-blue: #347481;
+
+   /* FONTS */
+
+    --font-title-xl: 400 clamp(3rem, 5vw, 5.5rem) "DM+ Serif Display", serif;
+    --font-title-lg: 400 clamp(1.5rem, 5vw, 3.5rem) "DM+ Serif Display", serif;
+    --font-title-md: 600 clamp(0,5rem, 5vw, 1rem) "Plus Jakarta Sans", serif, uppercase;
+    --font-title-sm: 600 clamp(0,5rem, 5vw, 1rem) "Plus Jakarta Sans", serif;
+
+
+    --font-body: 400 clamp(0,5rem, 5vw, 1rem) "Plus Jakarta Sans", serif;
+    --font-link: 500 clamp(0,5rem, 5vw, .875rem) "Plus Jakarta Sans", serif;
+
+/* SPACING */
+
+    --spacing-xxxl:10rem;
+    --spacing-xxl:6rem;
+    --spacing-xl:5rem;
+    --spacing-lg:2rem;
+    --spacing-md:1.5rem;
+    --spacing-sm:1rem;
+
+/* Radius */
+    --radius-sm:16px;
+    --radius-full:100px;    
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-beige);
+    color: var(--color-dark-green);
+    font: var(--font-body);
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font: var(--font-link);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h1, .title-xl {
+   font: var(--font-title-xl); 
+}
+
+h2, .title-lg {
+    font: var(--font-title-lg);
+}
+
+h3, .title-md {
+    font: var(--font-title-md);
+}
+
+h4, .title-sm {
+    font: var(--font-title-sm);
+
+}
+
+
