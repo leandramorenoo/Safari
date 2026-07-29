@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuru Safari</title>
+    <title>Nuru Safari | Safari de lujo en África</title>
+    <link rel="icon" type="image/svg+xml" href="media/Favicon.svg" />
     <link rel="stylesheet" href="css/index.css">
 
 
@@ -13,37 +14,51 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
-    <link href="
-    https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css
-    " rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
-    <header>
+    <!--<header>
 
         <i class="ri-menu-line no-desktop"></i>
-        <a href="#">Nuru Safari</a>
+        <a title="Nuru Safari" href="index.html"><img src="media/Logo-white.svg" alt="Nuru Safari"></a>
         <a class="btn btn--white font-btn" href="#">Reservar</a>
+
+    </header>-->
+
+    <header class="header">
+        <div class="header__block">
+            <i class="ri-menu-line no-desktop"></i>
+            <a class="logo" title="Nuru Safari" href="index.html"><img src="media/Logo-white.svg" alt="Nuru Safari"></a>
+            <a class="btn btn--white font-btn header__button" href="#">Reservar</a>
+
+        </div>
 
     </header>
 
     <main>
+
+    <!-- HERO -->    
         <section class="hero">
-            <div class="hero__image">
-                <div class="hero__block block">
-                    <h1>Despierta entre la calma salvaje de África</h1>
-                    <p>Una experiencia inmersiva donde el lujo moderno se funde con el espíritu
-                        ancestral de la sabana.</p>
-                    <div class="hero__buttons">
-                        <a class="btn btn--white font-btn" href="#">Ver experiencias</a>
-                    </div>
+            <video class="hero__video" autoplay muted loop playsinline>
+                <source src="media/Video-hero.mp4">
+            </video>
+
+            <div class="hero__opacity"></div>
+            <div class="hero__block block">
+                <div class="hero__content">
+                    
+                    <span class="title-xl">Despierta entre la calma salvaje de la sabana.</span>
+                    <h1 class="font-btn">Safari de lujo en África</h1>
+                    <!--<p class="font-body">Experiencia inmersiva donde el lujo moderno se funde con el espíritu ancestral.</p>-->
+                    <a class="btn btn--border font-btn" href="#">Ver experiencias</a>
                 </div>
-
             </div>
-
         </section>
-
+    <!-- /HERO -->  
+     
+    <!-- INTRODUCTION -->   
         <section class="intro section">
             <div class="intro__block block">
 
@@ -54,17 +69,17 @@
                         <p>En Nuru Safari, no solo ofrecemos una estancia; curamos un diálogo entre el alma y el
                             horizonte infinito. Nuestra arquitectura minimalista respeta la topografía del terreno,
                             utilizando materiales nobles que envejecen con la gracia del continente.</p>
-                        <a class="title-small" href="#">Descubra nuestro proposito</a>
+                        <a class="title-small" href="#">Descubra nuestro proposito <i class="ri-arrow-right-line"></i></a>
 
                     </div>
 
                     <div class="intro__img">
-                        <img src="media/Inicio-Banner.webp" alt="Hospedaje Nuru Hotel">
+                        <img title="Hotel Nuru sala de estar" src="media/Inicio-introduction.png" alt="Sala de una villa del Hotel Nuru Safari">
                     </div>
                 </div>
             </div>
-
         </section>
+    <!-- /INTRODUCTION -->     
 
     </main>
 
