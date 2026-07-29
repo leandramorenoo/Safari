@@ -17,9 +17,9 @@
     --font-title-xl: 400 clamp(3rem, 5vw, 5.5rem) "DM Serif Display", serif;
     --font-title-lg: 400 clamp(2rem, 4vw, 3.5rem) "DM Serif Display", serif;
     --font-title-md: 400 clamp(1.25rem, 2vw, 1.5rem) "DM Serif Display", serif;
-    --font-title-sm: 500 0.875rem "Plus Jakarta Sans", sans-serif, uppercase;
+    --font-title-sm: 500 0.875rem "Plus Jakarta Sans", sans-serif;
 
-    --font-highlight: 600 1rem "Plus Jakarta Sans", sans-serif, uppercase;
+    --font-highlight: 600 1rem "Plus Jakarta Sans", sans-serif;
     --font-small-title: 700 1rem "Plus Jakarta Sans", sans-serif;
 
     --font-body: 400 1rem "Plus Jakarta Sans", sans-serif;
@@ -35,9 +35,18 @@
     --spacing-sm:2rem;
     --spacing-xs:1rem;
 
-/* RaADIUS */
+/* RADIUS */
     --radius-sm:16px;
-    --radius-full:100px;      
+    --radius-full:100px;    
+    
+/* SIZE */
+
+--size-icon-md: 1.5rem;
+
+--size-max-width:90rem;
+--size-min-width:20rem;
+
+
 
 }
 
@@ -50,7 +59,7 @@
 
 body {
    background-color: var(--color-cream);
-    color: var(--color-dark-green);
+    color: var(--color-brown-dark);
     font: var(--font-body);
 }
 
@@ -84,8 +93,19 @@ h3, .title-md {
 }
 
 h4, .title-sm {
+    text-transform: uppercase;
     font: var(--font-title-sm);
 
+}
+
+
+.title-small {
+    font: var(--font-small-title);
+
+}
+.font-btn {
+    text-transform: uppercase;
+    font: var(--font-highlight);
 }
 
 .block {
@@ -103,21 +123,54 @@ h4, .title-sm {
 
 .btn {
     display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-lg);
+    padding: var(--spacing-xs) var(--spacing-md);
     border-radius: var(--radius-full);
     text-align: center;
 
     &.btn--green {
-        background-color: var(--color-dark-green);
+        background-color: var(--color-green-dark);
         color: var(--color-cream);
     }
 
     &.btn--white {
         background-color: var(--color-cream);
-        color: var(--color-dark-green);
+        color: var(--color-green-dark);
     }
 }
 
+header {
+    padding: var(--spacing-xs);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+
+    position:sticky;
+    top: 0rem;
+    z-index: 10;
+    /*background-color: var(--color-green-light)*/
+}
+
+/* SECCIÓN HERO */
+
+.hero__image {
+    background: linear-gradient(7deg, rgba(31, 31, 31, 1) 0%, rgba(31, 31, 31, 0) 100%), url('../media/Inicio-Banner.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__block {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-cream);
+    gap: var(--spacing-md);
+}
 
 
 /*SECCION INTRO*/
@@ -133,18 +186,29 @@ h4, .title-sm {
 
 .intro__content {
     display: flex;
-    gap: var(--spacing-md);
+    align-items: start;
+    gap: var(--spacing-xxxl);
+    
 }
 .intro__info {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
 
+
+    & h4 {
+       color: var(--color-green-light); 
+    }
+
+    & h2, a {
+        color: var(--color-green-dark);
+    }
+
 }
 
 .intro__img {
    display: flex;
-
+   
 
 }
 
