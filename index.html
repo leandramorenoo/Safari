@@ -19,29 +19,20 @@
 </head>
 
 <body>
-    <!--<header>
-
-        <i class="ri-menu-line no-desktop"></i>
-        <a title="Nuru Safari" href="index.html"><img src="media/Logo-white.svg" alt="Nuru Safari"></a>
-        <a class="btn btn--white font-btn" href="#">Reservar</a>
-
-    </header>-->
-
+    
     <header class="header">
         <div class="header__block">
             <i class="ri-menu-line no-desktop"></i>
             <a class="logo" title="Nuru Safari" href="index.html"><img src="media/Logo-white.svg" alt="Nuru Safari"></a>
             <a class="btn btn--white font-btn header__button" href="#">Reservar</a>
-
         </div>
-
     </header>
 
     <main>
 
         <!-- HERO -->
         <section class="hero">
-            <video class="hero__video" autoplay muted loop playsinline poster="media/Inicio-Banner.webp">
+            <video class="hero__video" autoplay muted loop playsinline poster="media/Inicio-banner.webp">
                 <source src="media/Video-hero.mp4" type="video/mp4" />
                 <source src="media/Video-hero.webm" type="video/webm" />
             </video>
@@ -62,7 +53,6 @@
         <!-- INTRODUCTION -->
         <section class="intro section">
             <div class="intro__block block">
-
                 <div class="intro__content">
                     <div class="intro__info">
                         <h4>Nuestra esencia</h4>
@@ -70,14 +60,17 @@
                         <p>En Nuru Safari, no solo ofrecemos una estancia; curamos un diálogo entre el alma y el
                             horizonte infinito. Nuestra arquitectura minimalista respeta la topografía del terreno,
                             utilizando materiales nobles que envejecen con la gracia del continente.</p>
-                        <a class="title-small" href="#">Descubra nuestro proposito <i
+                        <a class="btn--small" href="#">Descubra nuestro proposito <i
                                 class="ri-arrow-right-line"></i></a>
-
                     </div>
 
                     <div class="intro__img">
-                        <img title="Hotel Nuru sala de estar" src="media/Inicio-introduction.png"
-                            alt="Sala de una villa del Hotel Nuru Safari">
+                        <picture>
+                            <source srcset="media/Inicio-introduction.avif" type="image/avif">
+                            <source srcset="media/Inicio-introduction.webp" type="image/webp">
+                            <img src="media/Inicio-introduction.jpg" alt="Sala principal de una villa de Nuru Safari"
+                               title="Villa de lujo con vistas a la sabana" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -87,27 +80,40 @@
         <!-- AVENTURAS -->
 
         <section class="adventures">
-            <div class="adventures__block block">
+            <div class="adventures__block block section">
                 <div class="adventures__head">
                     <h4>Aventuras curadas</h4>
                     <h2>Momentos que Definen una Vida</h2>
                 </div>
-                <div class="adventures__row">
+                <div>
 
-                    <ul class="adventures__row" >
-                        <li>
-                            <img class="adventures__video" src="media/Inicio-adventures-1.webp" alt="" />
+                    <ul class="adventures__row">
+                        <li class="adventures__item">
+                            
+                            <video class="adventures__video" autoplay muted loop playsinline
+                                poster="media/Inicio-adventures-1.webp">
+                                <source src="media/Inicio-adventures-Video-1.webm" type="video/webm" />
+                                <source src="media/Inicio-adventures-Video-1.mp4" type="video/mp4" />
+                            </video>
                             <h3 class="adventures__video-title">Safaris Privados</h3>
                         </li>
 
-                        <li>
-                           <img class="adventures__video"  src="media/Inicio-adventures-2.webp" alt="" />
-                            <h3>Paseos en Globo</h3>
+                        <li class="adventures__item">
+                            <video class="adventures__video" autoplay muted loop playsinline
+                                poster="media/Inicio-adventures-1.webp">
+                                <source src="media/Inicio-adventures-Video-1.webm" type="video/webm" />
+                                <source src="media/Inicio-adventures-Video-1.mp4" type="video/mp4" />
+                            </video>
+                            <h3 class="adventures__video-title">Paseos en Globo</h3>
                         </li>
 
-                        <li>
-                            <img class="adventures__video" src="media/Inicio-adventures-3.webp" alt="" />
-                            <h3>Cenas bajo las estrellas</h3>
+                        <li class="adventures__item">
+                            <video class="adventures__video" autoplay muted loop playsinline
+                                poster="media/Inicio-adventures-1.webp">
+                                <source src="media/Inicio-adventures-Video-1.webm" type="video/webm" />
+                                <source src="media/Inicio-adventures-Video-1.mp4" type="video/mp4" />
+                            </video>
+                            <h3 class="adventures__video-title">Cenas bajo las estrellas</h3>
                         </li>
                     </ul>
                 </div>

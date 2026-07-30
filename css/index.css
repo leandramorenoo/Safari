@@ -18,9 +18,9 @@
 --font-title-xl: 400 clamp(3rem, 5vw, 5.5rem) "DM Serif Display", serif;
 --font-title-lg: 400 clamp(2rem, 4vw, 3.5rem) "DM Serif Display", serif;
 --font-title-md: 400 clamp(1.25rem, 2vw, 1.5rem) "DM Serif Display", serif;
---font-title-sm: 500 0.875rem "Plus Jakarta Sans", sans-serif;
+--font-title-sm: 500 0.9rem "Plus Jakarta Sans", sans-serif;
 
---font-highlight: 600 1rem "Plus Jakarta Sans", sans-serif;
+--font-highlight: 600 0.9rem "Plus Jakarta Sans", sans-serif;
 --font-small-title: 700 1rem "Plus Jakarta Sans", sans-serif;
 
 --font-body: 400 1rem "Plus Jakarta Sans", sans-serif;
@@ -35,6 +35,7 @@
 --spacing-md:3rem;
 --spacing-sm:2rem;
 --spacing-xs:1rem;
+--spacing-xxs:0.7rem;
 
 /* RADIUS */
 --radius-sm:16px;
@@ -131,9 +132,10 @@ h4, .title-sm {
 
 .btn {
     display: inline-block;
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-xxs) var(--spacing-md);
     border-radius: var(--radius-full);
     text-align: center;
+    font: var(--font-highlight);
 
     &.btn--border {
         background-color: transparent;
@@ -163,6 +165,19 @@ h4, .title-sm {
             background-color: var(--color-green-dark);
             color: var(--color-cream);
         }
+    }
+}
+
+.btn--small {
+    padding-bottom: .5rem;
+    align-self: start;
+    border-bottom: 1px solid  var(--color-green-dark);
+    color: var(--color-green-dark);
+    font: var(--font-small-title);
+    transition: transform 0.3s ease-out;
+    
+    &:hover {
+        transform: scale(1.05);
     }
 }
 
@@ -278,9 +293,7 @@ h4, .title-sm {
     display: flex;
     align-items: center;
     gap: var(--spacing-xl);
-    
-
-    
+      
 }
 
 .intro__content {
@@ -300,27 +313,22 @@ h4, .title-sm {
        color: var(--color-green-light); 
     }
 
-    & h2, a {
+    & h2 {
         color: var(--color-green-dark);
     }
 
-    & .title-small {
-        padding-bottom: .5rem;
-        align-self: start;
-        border-bottom: 1px solid  var(--color-green-dark);
-    }
 
 }
 
 .intro__img {
-   flex: 1 1 var(--size-min-width);
+    flex: 1 1 var(--size-min-width);
 
-   & img{
-    display: flex;
-    width: 100vw;
-    height: 70vh;
-    object-fit: cover;
-   }
+    & img {
+        display: block;
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+    }
 }
 
 /* /SECCION INTRODUCTION */
@@ -328,15 +336,16 @@ h4, .title-sm {
 /* SECCION ADVENTURES */
 
 .adventures {
-    padding: var(--spacing-xxxl) var(--spacing-md);
-    margin: 0 auto;
+    
     background-color: var(--color-beige);
 }
+
+
 
 .adventures__block {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
 
 }
 .adventures__head {
@@ -344,6 +353,14 @@ h4, .title-sm {
     flex-direction: column;
     gap: var(--spacing-sm);
     align-items: center;
+
+    & h4 {
+       color: var(--color-green-light); 
+    }
+
+    & h2 {
+        color: var(--color-green-dark);
+    }
 
 }
 .adventures__row {
@@ -353,19 +370,29 @@ h4, .title-sm {
 
 }
 
+.adventures__item {
+    position: relative;
+    overflow: hidden;
+    
+}
+
 .adventures__video {
     display: flex;
     flex-direction: column;
     height: 70vh;
     object-fit: cover;
 
-    position: relative;
+    max-width: 100%;
+    width: 100%;
+    border-radius: var(--radius-sm);
+
 }
 
 .adventures__video-title {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
+    color: var(--color-cream);
 }
 
 
