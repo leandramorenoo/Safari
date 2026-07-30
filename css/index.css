@@ -1,18 +1,19 @@
 :root {
-  /* COLORES PRINCIPALES*/ 
+
+/* COLORES PRINCIPALES*/ 
 
 --color-cream: #FFF6E8;
---color-beige:#D8C3A5;
+--color-beige:#E6DBCB;
 --color-green-dark: #33411E;
 --color-green-light: #808847;
 --color-brown: #745936;
 --color-brown-dark: #3A2519;
 
-    /* COLORES ACENTOS*/ 
+/* COLORES ACENTOS*/ 
 --color-terracota: #B55D3E;
 --color-blue: #347481;
 
-   /* FONTS */
+/* FONTS */
 
 --font-title-xl: 400 clamp(3rem, 5vw, 5.5rem) "DM Serif Display", serif;
 --font-title-lg: 400 clamp(2rem, 4vw, 3.5rem) "DM Serif Display", serif;
@@ -45,6 +46,8 @@
 
 --size-max-width:90rem;
 --size-min-width:20rem;
+
+--size-min-width-sm: 13.125rem;
 
 
 
@@ -176,9 +179,7 @@ h4, .title-sm {
     z-index: 10;
 
     color: var(--color-cream);
-    background-color: transparent;
-    
-
+    height: fit-content;
 }
 
 
@@ -189,9 +190,6 @@ h4, .title-sm {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-
-    /*background-color: rgba(51, 65, 30, 30%)*/
-
 }
 
 .logo {
@@ -251,7 +249,8 @@ h4, .title-sm {
 
 .hero__content {
 
-    width: min(100%, 50rem);
+    width: 100%;
+    max-width: 50rem;
     padding: var(--spacing-sm);
     color: var(--color-cream);
     text-align: center;
@@ -288,15 +287,14 @@ h4, .title-sm {
     display: flex;
     align-items: center;
     gap: var(--spacing-xxxl);
-    /*flex-wrap: wrap;*/
-    
+    flex-wrap: wrap;    
     
 }
 .intro__info {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
-    
+    flex: 1 1 var(--size-min-width);    
 
     & h4 {
        color: var(--color-green-light); 
@@ -307,23 +305,68 @@ h4, .title-sm {
     }
 
     & .title-small {
+        padding-bottom: .5rem;
+        align-self: start;
         border-bottom: 1px solid  var(--color-green-dark);
     }
 
 }
 
 .intro__img {
-   
+   flex: 1 1 var(--size-min-width);
+
    & img{
     display: flex;
     width: 100vw;
     height: 70vh;
     object-fit: cover;
-    
    }
 }
 
-
 /* /SECCION INTRODUCTION */
 
+/* SECCION ADVENTURES */
 
+.adventures {
+    padding: var(--spacing-xxxl) var(--spacing-md);
+    margin: 0 auto;
+    background-color: var(--color-beige);
+}
+
+.adventures__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+
+}
+.adventures__head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+
+}
+.adventures__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--size-min-width-sm), 1fr));
+    gap: var(--spacing-md);
+
+}
+
+.adventures__video {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    object-fit: cover;
+
+    position: relative;
+}
+
+.adventures__video-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+
+/* /SECCION ADVENTURES */

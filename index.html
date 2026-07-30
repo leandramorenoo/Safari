@@ -39,16 +39,17 @@
 
     <main>
 
-    <!-- HERO -->    
+        <!-- HERO -->
         <section class="hero">
-            <video class="hero__video" autoplay muted loop playsinline>
-                <source src="media/Video-hero.mp4">
+            <video class="hero__video" autoplay muted loop playsinline poster="media/Inicio-Banner.webp">
+                <source src="media/Video-hero.mp4" type="video/mp4" />
+                <source src="media/Video-hero.webm" type="video/webm" />
             </video>
 
             <div class="hero__opacity"></div>
             <div class="hero__block block">
                 <div class="hero__content">
-                    
+
                     <span class="title-xl">Despierta entre la calma salvaje de la sabana.</span>
                     <h1 class="font-btn">Safari de lujo en África</h1>
                     <!--<p class="font-body">Experiencia inmersiva donde el lujo moderno se funde con el espíritu ancestral.</p>-->
@@ -56,9 +57,9 @@
                 </div>
             </div>
         </section>
-    <!-- /HERO -->  
-     
-    <!-- INTRODUCTION -->   
+        <!-- /HERO -->
+
+        <!-- INTRODUCTION -->
         <section class="intro section">
             <div class="intro__block block">
 
@@ -69,17 +70,51 @@
                         <p>En Nuru Safari, no solo ofrecemos una estancia; curamos un diálogo entre el alma y el
                             horizonte infinito. Nuestra arquitectura minimalista respeta la topografía del terreno,
                             utilizando materiales nobles que envejecen con la gracia del continente.</p>
-                        <a class="title-small" href="#">Descubra nuestro proposito <i class="ri-arrow-right-line"></i></a>
+                        <a class="title-small" href="#">Descubra nuestro proposito <i
+                                class="ri-arrow-right-line"></i></a>
 
                     </div>
 
                     <div class="intro__img">
-                        <img title="Hotel Nuru sala de estar" src="media/Inicio-introduction.png" alt="Sala de una villa del Hotel Nuru Safari">
+                        <img title="Hotel Nuru sala de estar" src="media/Inicio-introduction.png"
+                            alt="Sala de una villa del Hotel Nuru Safari">
                     </div>
                 </div>
             </div>
         </section>
-    <!-- /INTRODUCTION -->     
+        <!-- /INTRODUCTION -->
+
+        <!-- AVENTURAS -->
+
+        <section class="adventures">
+            <div class="adventures__block block">
+                <div class="adventures__head">
+                    <h4>Aventuras curadas</h4>
+                    <h2>Momentos que Definen una Vida</h2>
+                </div>
+                <div class="adventures__row">
+
+                    <ul class="adventures__row" >
+                        <li>
+                            <img class="adventures__video" src="media/Inicio-adventures-1.webp" alt="" />
+                            <h3 class="adventures__video-title">Safaris Privados</h3>
+                        </li>
+
+                        <li>
+                           <img class="adventures__video"  src="media/Inicio-adventures-2.webp" alt="" />
+                            <h3>Paseos en Globo</h3>
+                        </li>
+
+                        <li>
+                            <img class="adventures__video" src="media/Inicio-adventures-3.webp" alt="" />
+                            <h3>Cenas bajo las estrellas</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- /AVENTURAS -->
 
     </main>
 
