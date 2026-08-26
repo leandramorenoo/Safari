@@ -374,6 +374,14 @@ h4, .title-sm {
     
 }
 
+.adventures__item::after { /*Pseudo-elemento */
+    content: ""; /*Obligatorio*/
+    position: absolute;
+    inset: 0; /* top, right bottom left -> 0 */
+    background-color: rgba(0, 0, 0, 0.20);
+    border-radius: var(--radius-sm);
+}
+
 .adventures__video {
     display: flex;
     flex-direction: column;
@@ -391,6 +399,7 @@ h4, .title-sm {
     bottom: 1rem;
     left: 1rem;
     color: var(--color-cream);
+    z-index: 1;
 }
 
 
