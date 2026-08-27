@@ -99,6 +99,7 @@ h3, .title-md {
 h4, .title-sm {
     text-transform: uppercase;
     font: var(--font-title-sm);
+    letter-spacing: 0.1rem;
 
 }
 
@@ -148,6 +149,18 @@ h4, .title-sm {
 
     }
 
+    &.btn--border--green {
+        background-color: transparent;
+        border: 1px solid var(--color-green-dark);
+        color: var(--color-green-dark);
+
+        &:hover {
+            background-color: var(--color-green-dark);
+            color: var(--color-cream);
+        }
+
+    }
+
     &.btn--green {
         background-color: var(--color-green-dark);
         color: var(--color-cream);
@@ -171,7 +184,7 @@ h4, .title-sm {
 .btn--small {
     padding-bottom: .5rem;
     align-self: start;
-    border-bottom: 1px solid  var(--color-green-dark);
+    border-bottom: 1px solid  var(--color-green-light);
     color: var(--color-green-dark);
     font: var(--font-small-title);
     transition: transform 0.3s ease-out;
@@ -224,7 +237,7 @@ h4, .title-sm {
 
 /* /HEADER */
 
-/* SECCIÓN HERO */
+/* SECTION  HERO */
 
 
 .hero {
@@ -284,10 +297,10 @@ h4, .title-sm {
     z-index: 1;
 }
 
-/* /SECCIÓN HERO */
+/* /SECTION  HERO */
 
 
-/* SECCION INTRODUCTION */
+/* SECTION  INTRODUCTION */
 
 .intro__block {
     display: flex;
@@ -330,9 +343,9 @@ h4, .title-sm {
     }
 }
 
-/* /SECCION INTRODUCTION */
+/* /SECTION INTRODUCTION */
 
-/* SECCION ADVENTURES */
+/* SECTION  ADVENTURES */
 
 .adventures {
     
@@ -403,4 +416,78 @@ h4, .title-sm {
 }
 
 
-/* /SECCION ADVENTURES */
+/* /SECTION  ADVENTURES */
+
+/* SECTION ACCOMODATIONS */
+
+.accomodations__block{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    & h4 {
+       color: var(--color-green-light); 
+    }
+
+    & h2 {
+        color: var(--color-green-dark);
+    }
+}
+
+.accomodations__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacing-sm);
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+
+}
+.accomodations__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--size-min-width-sm), 1fr));
+    gap: var(--spacing-sm);
+
+}
+.accomodations__card {
+    display: flex;
+    flex-direction: column;
+
+    & img {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+}
+
+}
+
+.accomodations__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    flex: 1;
+    padding-top: var(--spacing-xs);
+    color: var(--color-green-dark);
+
+}
+
+.accomodations__info .btn--small {
+    margin-top: auto;
+}
+.accomodations__icons {
+    display: flex;
+    gap: var(--spacing-sm);
+    color: var(--color-green-light);
+    font: var(--font-body-small);
+
+    & li:last-child {
+    border-left: 1px solid var(--color-green-light);
+    padding-left: var(--spacing-sm);
+}
+
+}
+
+
+/* /SECTION ACCOMODATIONS */
