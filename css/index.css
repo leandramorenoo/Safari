@@ -2,6 +2,7 @@
 
 /* COLORES PRINCIPALES*/ 
 
+--color-white:#FFFFFF;
 --color-cream: #FFF6E8;
 --color-beige:#E6DBCB;
 --color-green-dark: #33411E;
@@ -116,7 +117,30 @@ h4, .title-sm {
     font: var(--font-body);
 }
 
+/*FORM
+input:not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    padding: var(--spacing-xs);
+    border: 1px solid var(--color-beige);
+    background-color: var(--color-white);
+    color: var(--color-green-light);
+    font: var(--font-body);
+    outline: none;
 
+    &:focus {
+        border-color: var(--color-green-light);
+    }
+}
+
+select {
+    border-right: 19px solid var(--color-light);
+}
+
+label:not([for="acceptance"]) {
+    display: none;
+}*/
 
 .block {
     max-width: var(--size-max-width);
@@ -137,6 +161,9 @@ h4, .title-sm {
     border-radius: var(--radius-full);
     text-align: center;
     font: var(--font-highlight);
+    cursor: pointer;
+
+    border: none;
 
     &.btn--border {
         background-color: transparent;
@@ -526,3 +553,100 @@ h4, .title-sm {
 }
 
 /* /SECTION QUOTE */
+
+/* SECTION CONTACT */
+/* LEFT*/
+.contact__block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-xxl);
+}
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    flex: 1 1 var(--size-min-width);
+    
+    & h2 {
+        color: var(--color-green-dark);
+    }
+   
+}
+.contact__icons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    color: var(--color-green-dark);
+
+}
+
+/* RIGHT*/
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    flex: 4 1 var(--size-min-width);
+    background-color: var(--color-white);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-md);
+
+}
+
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-row {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+
+    & .form-field {
+        flex: 1 1 150px;
+        /*Grow Shrink Basis*/
+    }
+   
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    flex: 1;
+
+    & label {
+    color: var(--color-brown);
+    }
+
+   &.field--acceptance {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: var(--spacing-md);
+        
+    }
+}
+
+.form-field input, select, textarea {
+    width: 100%;
+    padding: var(--spacing-xs);
+    border: 1px solid var(--color-beige);
+    background-color: var(--color-white);
+    color: var(--color-green-dark);
+    font: var(--font-body);
+    outline: none;
+
+    &:focus {
+        border-color: var(--color-green-light);
+    }
+}
+
+.form-field textarea {
+    height: 5rem;
+    resize: none;
+}
+
+/* /SECTION CONTACT */
