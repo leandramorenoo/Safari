@@ -486,8 +486,43 @@ h4, .title-sm {
     border-left: 1px solid var(--color-green-light);
     padding-left: var(--spacing-sm);
 }
-
 }
 
-
 /* /SECTION ACCOMODATIONS */
+
+/* SECTION QUOTE */
+
+.quote {
+    background-color: var(--color-green-dark);
+}
+.quote__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+
+    & h2 {
+        color: var(--color-cream);
+        text-align: center;
+    }
+
+}
+.quote__icon {
+    width: 3rem;
+    height: 5rem;
+}
+
+.quote__people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--spacing-xs);
+    & p {
+        color: var(--color-beige);
+    }
+    & span {
+        color: var(--color-green-light);
+    }
+}
+
+/* /SECTION QUOTE */
