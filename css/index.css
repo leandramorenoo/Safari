@@ -184,6 +184,7 @@ label:not([for="acceptance"]) {
     &.btn--border {
         background-color: transparent;
         border: 1px solid var(--color-cream);
+        color: var(--color-cream);
 
         &:hover {
             background-color: var(--color-cream);
@@ -818,8 +819,6 @@ label:not([for="acceptance"]) {
 .experiences__head {
   
     color: var(--color-beige);
-
-    
 }
 
 .experiences__img {
@@ -835,5 +834,19 @@ label:not([for="acceptance"]) {
 }
 
 /* /EXPERIENCES */
+
+.cta__block {
+    background-color: var(--color-green-dark);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+}
+
+.cta__btn {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding-top: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 /* ---- / PAGE ACCOMODATIONS ---- */
