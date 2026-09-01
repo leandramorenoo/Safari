@@ -245,13 +245,17 @@ label:not([for="acceptance"]) {
 .header {
     position: fixed;
     inset: 0; /*top,right,bottom,left*/
-    padding: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
 
     width: 100%;
     z-index: 10;
 
     color: var(--color-cream);
     height: fit-content;
+}
+
+.header__contact{
+    background-color: var(--color-green-light);
 }
 
 
@@ -585,12 +589,20 @@ label:not([for="acceptance"]) {
     }
    
 }
-.contact__icons {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-    color: var(--color-green-dark);
 
+.icons__row {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    gap: var(--spacing-xs);
+    
+    & i {
+        color: var(--color-green-light);
+    }
+}
+
+.icons__row a:hover {
+    text-decoration: underline;
 }
 
 /* RIGHT*/
@@ -770,7 +782,8 @@ label:not([for="acceptance"]) {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
-    padding-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    
 
 }
 
@@ -855,43 +868,46 @@ label:not([for="acceptance"]) {
 
 /* MAP CONTACT */
 
+.map {
+    background-color: var(--color-brown-dark);
+    color: var(--color-beige);
+}
+
 .map__block {
     display: flex;
     align-items: center;
-    gap: var(--spacing-xl);
-    
-      
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;  
 }
 
-.map__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xxxl);
-    flex-wrap: wrap;    
-    
-}
 .map__info {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    flex: 1 1 var(--size-min-width);    
-
-    & h4 {
-       color: var(--color-green-light); 
-    }
-
-    & h2 {
-        color: var(--color-green-dark);
-    }
-
+    flex: 1 1 var(--size-min-width);   
 }
 
-.map__row {
-    display: flex;
-    gap: var(--spacing-xs);
-    
-    & i {
-        color: var(--color-green-light);
-    }
+.map__media {
+    flex: 1 1 var(--size-min-width);
 }
+
+.map__frame {
+    width: 100%;
+    height: 50vh;
+    border: 0;
+    border-radius: var(--radius-sm);
+    display: block;
+    filter: saturate(90%);
+}
+
+/* /MAP CONTACT */
+
+/* ---- /PAGE CONTACT ---- */
+
+/*.section {
+    outline: 3px solid red;
+}
+
+.estancias {
+    outline: 3px solid blue;
+}*/

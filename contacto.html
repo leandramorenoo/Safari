@@ -39,11 +39,11 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header__contact">
         <div class="header__block">
             <i class="ri-menu-line no-desktop"></i>
             <a class="logo" title="Nuru Safari" href="index.html"><img src="media/Logo-white.svg" alt="Nuru Safari"></a>
-            <a class="btn btn--white font-btn header__button" href="#">Reservar</a>
+            <a class="btn btn--white font-btn header__button" href="contacto.html">Reservar</a>
         </div>
     </header>
 
@@ -57,8 +57,8 @@
     <!-- /HERO -->
 
     <!-- FORM -->
-    <section class="estancias section">
-        <div class="estancias__block">
+    <section class="formulario section">
+        <div class="estancias__block block">
             <div class="estancias__head">
                 <span class="head-green-light">Tu próxima aventura</span>
                 <h1 class="head-green-dark">Reserva tu estancia</h1>
@@ -150,7 +150,7 @@
                         <input name="acceptance" id="acceptance" required type="checkbox">
                         <label for="acceptance">He leido y acepto las politicas de privacidad.</label>
                     </div>
-                    <button class="btn btn--green" type="submit">
+                    <button class="btn btn--green title-sm" type="submit">
                         Enviar Solicitud de Reserva
                     </button>
                 </form>
@@ -161,45 +161,42 @@
     <!-- /FORM -->
 
     <!-- MAP CONTACT -->
-    <section class="map">
-        <div class="map__block section">
-            <div class="map__content">
+    <section id="mapa_contacto" class="map">
+        <div class="map__block block section">
                 <div class="map__info">
                     <h4 class="head-green-light">Estamos aqui para ayudarte</h4>
                     <h2>Hablemos de tu próxima aventura</h2>
                     <p>Si tienes alguna pregunta sobre tu estancia, nuestro equipo estará encantado de ayudarte.</p>
-                    <div class="map__row">
+                    <div class="icons__row">
                         <i class="ri-map-pin-2-line"></i>
                         <ul>
-                            <li class="title-sm">Ubicacion</li>
-                            <li>Masái Mara, Kenia</li>
+                            <li class="title-sm">Ubicación</li>
+                            <li><a href="https://maps.app.goo.gl/KWBfh21aofwgQFsM7" target="_blank">Masái Mara, Kenia</a></li>
                         </ul>
                     </div>
-                    <div class="map__row">
+                    <div class="icons__row">
                         <i class="ri-mail-line"></i>
                         <ul>
                             <li class="title-sm">Correo electrónico</li>
-                            <li><a href="mailto:reservas@nurusafari.com">
-                            reservas@nurusafari.com</a></li>
+                            <li><a href="mailto:reservas@nurusafari.com" target="_blank">
+                            info@nurusafari.com</a></li>
                         </ul>
                     </div>
-
-                    <div class="map__row">
+                
+                    <div class="icons__row">
                         <i class="ri-phone-line"></i>
                         <ul>
                             <li class="title-sm">Teléfono</li>
-                            <li>+254 700 000 000</li>
+                            <a href="tel:+255123456789" target="_blank"> +255 123 456 789</a>
                         </ul>
                     </div>
                 </div>
 
-                <div>
+                <div class="map__media">
                     <iframe class="map__frame"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2232366.6581637324!2d34.41153610559846!3d-2.0502450754894745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182ce8a64a31fdb1%3A0x296a9587e0c3c410!2sMas%C3%A1i%20Mara!5e0!3m2!1ses!2ses!4v1788253898773!5m2!1ses!2ses"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510570.4339076705!2d34.69977662985884!3d-1.2743413903522745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182ce8a64a31fdb1%3A0x296a9587e0c3c410!2sMas%C3%A1i%20Mara!5e0!3m2!1ses!2ses!4v1788269987740!5m2!1ses!2ses"
+                        style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
-            </div>
         </div>
     </section>
     <!-- /MAP CONTACT -->
