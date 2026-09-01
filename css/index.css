@@ -850,3 +850,48 @@ label:not([for="acceptance"]) {
 }
 
 /* ---- / PAGE ACCOMODATIONS ---- */
+
+/* ---- PAGE CONTACT ---- */
+
+/* MAP CONTACT */
+
+.map__block {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    
+      
+}
+
+.map__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xxxl);
+    flex-wrap: wrap;    
+    
+}
+.map__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    flex: 1 1 var(--size-min-width);    
+
+    & h4 {
+       color: var(--color-green-light); 
+    }
+
+    & h2 {
+        color: var(--color-green-dark);
+    }
+
+}
+
+.map__row {
+    display: flex;
+    gap: var(--spacing-xs);
+    
+    & i {
+        color: var(--color-green-light);
+    }
+}
