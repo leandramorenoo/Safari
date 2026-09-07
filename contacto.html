@@ -35,18 +35,28 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet" />
-
+<script defer src="js/index.js"></script>
 </head>
 
 <body>
     <header class="header header__contact">
         <div class="header__block">
-            <i class="ri-menu-line no-desktop"></i>
+            <button id="toggleMenuIcon" class="header__menu-button" onclick="toggleMenu()" aria-label="Abrir menú"><i
+                    class="ri-menu-line"></i></button>
             <a class="logo" title="Nuru Safari" href="index.html"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
             <a class="btn btn--white font-btn header__button" href="contacto.html">Reservar</a>
         </div>
-    </header>
 
+        <nav id="menu" class="menu hidden">
+            <ul class="menu__list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estancias.html">Estancias</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
 
         <!-- HERO -->

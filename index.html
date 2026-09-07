@@ -35,23 +35,33 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet" />
-
+    <script defer src="js/index.js"></script>
 </head>
 
 <body>
-
     <header class="header">
         <div class="header__block">
-            <i class="ri-menu-line no-desktop"></i>
+            <button id="toggleMenuIcon" class="header__menu-button" onclick="toggleMenu()" aria-label="Abrir menú"><i
+                    class="ri-menu-line"></i></button>
             <a class="logo" title="Nuru Safari" href="index.html"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
             <a class="btn btn--white font-btn header__button" href="contacto.html">Reservar</a>
         </div>
+
+        <nav id="menu" class="menu hidden">
+            <ul class="menu__list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estancias.html">Estancias</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
-        <!-- HERO -->
-        <section class="hero">
+    <!-- HERO -->
+    <section class="hero">
             <video class="hero__video" autoplay muted loop playsinline poster="media/inicio-banner.webp">
                 <source src="media/video-hero.mp4" type="video/mp4" />
                 <source src="media/video-hero.webm" type="video/webm" />
@@ -68,7 +78,6 @@
                 </div>
             </div>
         </section>
-
     </main>
     <!-- /HERO -->
 
@@ -167,7 +176,8 @@
                             <li><i class="ri-ruler-2-line"></i> 180m²</li>
                             <li><i class="ri-group-line"></i> 8 Huéspedes</li>
                         </ul>
-                        <p>Horizontes infinitos, espacios abiertos y la sabana extendiéndose ante ti en absoluta privacidad.</p>
+                        <p>Horizontes infinitos, espacios abiertos y la sabana extendiéndose ante ti en absoluta
+                            privacidad.</p>
                         <a class="btn--small title-sm" href="estancias.html#villa_savanna">Explorar Villa</a>
                     </div>
                 </li>
@@ -187,7 +197,8 @@
                             <li><i class="ri-ruler-2-line"></i> 120m²</li>
                             <li><i class="ri-group-line"></i> 6 Huéspedes</li>
                         </ul>
-                        <p>Un santuario privado para compartir, con piscina infinita y vistas que se pierden en la sabana.</p>
+                        <p>Un santuario privado para compartir, con piscina infinita y vistas que se pierden en la
+                            sabana.</p>
                         <a class="btn--small title-sm" href="estancias.html#retiro_luna">Explorar Retiro</a>
                     </div>
                 </li>
@@ -207,7 +218,8 @@
                             <li><i class="ri-ruler-2-line"></i> 85m²</li>
                             <li><i class="ri-group-line"></i> 2 Huéspedes</li>
                         </ul>
-                        <p>Una suite suspendida entre árboles centenarios, creada para desconectar y vivir África desde dentro.</p>
+                        <p>Una suite suspendida entre árboles centenarios, creada para desconectar y vivir África desde
+                            dentro.</p>
                         <a class="btn--small title-sm" href="estancias.html#suite_baobab">Explorar Suite</a>
                     </div>
                 </li>
@@ -242,29 +254,30 @@
                     se pondrá en contacto con usted en menos de 24 horas.
                 </p>
 
-               <div class="icons__row">
-                        <i class="ri-map-pin-2-line"></i>
-                        <ul>
-                            <li class="title-sm">Ubicación</li>
-                            <li><a href="https://maps.app.goo.gl/KWBfh21aofwgQFsM7" target="_blank">Masái Mara, Kenia</a></li>
-                        </ul>
-                    </div>
-                    <div class="icons__row">
-                        <i class="ri-mail-line"></i>
-                        <ul>
-                            <li class="title-sm">Correo electrónico</li>
-                            <li><a href="mailto:reservas@nurusafari.com" target="_blank">
-                            info@nurusafari.com</a></li>
-                        </ul>
-                    </div>
-                
-                    <div class="icons__row">
-                        <i class="ri-phone-line"></i>
-                        <ul>
-                            <li class="title-sm">Teléfono</li>
-                            <a href="tel:+255123456789" target="_blank"> +255 123 456 789</a>
-                        </ul>
-                    </div>
+                <div class="icons__row">
+                    <i class="ri-map-pin-2-line"></i>
+                    <ul>
+                        <li class="title-sm">Ubicación</li>
+                        <li><a href="https://maps.app.goo.gl/KWBfh21aofwgQFsM7" target="_blank">Masái Mara, Kenia</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icons__row">
+                    <i class="ri-mail-line"></i>
+                    <ul>
+                        <li class="title-sm">Correo electrónico</li>
+                        <li><a href="mailto:reservas@nurusafari.com" target="_blank">
+                                info@nurusafari.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="icons__row">
+                    <i class="ri-phone-line"></i>
+                    <ul>
+                        <li class="title-sm">Teléfono</li>
+                        <a href="tel:+255123456789" target="_blank"> +255 123 456 789</a>
+                    </ul>
+                </div>
             </div>
 
             <div class="contact__form">
@@ -349,10 +362,14 @@
                 <a class="footer__logo" title="Nuru Safari" href="index.html"><img src="media/logo-green.svg"
                         alt="Nuru Safari"></a>
                 <ul class="footer__social">
-                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="ri-tiktok-line"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-circle-line"></i></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="ri-youtube-line"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                                class="ri-instagram-line"></i></a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i
+                                class="ri-tiktok-line"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+                                class="ri-facebook-circle-line"></i></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                                class="ri-youtube-line"></i></a></li>
                 </ul>
             </div>
 

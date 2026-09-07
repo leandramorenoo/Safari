@@ -35,18 +35,28 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet" />
-
+    <script defer src="js/index.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header__block">
-            <i class="ri-menu-line no-desktop"></i>
+            <button id="toggleMenuIcon" class="header__menu-button" onclick="toggleMenu()" aria-label="Abrir menú"><i
+                    class="ri-menu-line"></i></button>
             <a class="logo" title="Nuru Safari" href="index.html"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
             <a class="btn btn--white font-btn header__button" href="contacto.html">Reservar</a>
         </div>
-    </header>
 
+        <nav id="menu" class="menu hidden">
+            <ul class="menu__list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estancias.html">Estancias</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
 
         <!-- HERO -->
@@ -100,8 +110,9 @@
                     <picture>
                         <source srcset="media/estancias/suite-kilimanjaro.avif" type="image/avif">
                         <source srcset="media/estancias/suite-kilimanjaro.webp" type="image/webp">
-                        <img src="media/estancias/suite-kilimanjaro.jpg" alt="Sala principal de una villa de Nuru Safari"
-                            title="Villa con vistas a la sabana" loading="lazy">
+                        <img src="media/estancias/suite-kilimanjaro.jpg"
+                            alt="Sala principal de una villa de Nuru Safari" title="Villa con vistas a la sabana"
+                            loading="lazy">
                     </picture>
 
                     <div class="accomodations__info">
@@ -352,7 +363,8 @@
                         <picture class="experiences__img">
                             <source srcset="media/estancias/experiencia-gastronomia.avif" type="image/avif">
                             <source srcset="media/estancias/experiencia-gastronomia.webp" type="image/webp">
-                            <img src="media/estancias/experiencia-gastronomia.jpg" alt="Experiencia de alta gastronomía" loading="lazy">
+                            <img src="media/estancias/experiencia-gastronomia.jpg" alt="Experiencia de alta gastronomía"
+                                loading="lazy">
                         </picture>
                         <h3 class="adventures__video-title">Alta Gastronomía</h3>
 
@@ -362,7 +374,8 @@
                         <picture class="experiences__img">
                             <source srcset="media/estancias/experiencia-spa.avif" type="image/avif">
                             <source srcset="media/estancias/experiencia-spa.webp" type="image/webp">
-                            <img src="media/estancias/experiencia-spa.jpg" alt="Experiencia en el Serengeti" loading="lazy">
+                            <img src="media/estancias/experiencia-spa.jpg" alt="Experiencia en el Serengeti"
+                                loading="lazy">
                         </picture>
                         <h3 class="adventures__video-title">Wellness & Spa</h3>
                     </li>
@@ -384,11 +397,11 @@
     <!-- CTA -->
     <section class="section">
         <div class="cta__block block">
-           <div class="adventures__head experiences__head">
+            <div class="adventures__head experiences__head">
                 <h4 class="head-green-light">El siguiente paso</h4>
                 <h2>Su estancia comienza aquí</h2>
                 <p>Permítanos crear una experiencia diseñada alrededor de usted.</p>
-            </div> 
+            </div>
 
             <div class="cta__btn">
                 <a class="btn btn--white font-btn" href="contacto.html">Reservar mi estancia</a>
