@@ -252,6 +252,10 @@ label:not([for="acceptance"]) {
 
     color: var(--color-cream);
     height: fit-content;
+
+    &.sticky {
+        background-color: var(--color-green-light);
+    }
 }
 
 .header__contact{
