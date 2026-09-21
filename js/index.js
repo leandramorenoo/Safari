@@ -4,10 +4,31 @@
 const menu = document.getElementById('menu')
 const toggleMenuIcon = document.getElementById('toggleMenuIcon')
 const header = document.querySelector('.header')
+// HERO GALERIA AUTOMATICA
+const galleryHero = [
+    /*['media/estancias/villa-savanna-1.jpg', 'media/estancias/villa-savanna-1.webp', 'media/estancias/villa-savanna-1.avif'],
+    ['media/estancias/villa-savanna-2.jpg', 'media/estancias/villa-savanna-2.webp', 'media/estancias/villa-savanna-2.avif'],
+    ['media/estancias/villa-savanna-3.jpg', 'media/estancias/villa-savanna-3.webp', 'media/estancias/villa-savanna-3.avif']*/
+    'media/estancias/villa-savanna-1.jpg',
+    'media/estancias/villa-savanna-2.jpg',
+    'media/estancias/villa-savanna-3.jpg'
+]
+
+let contador = 0
+let intervalo
+const timer = 2500
+const imagenRotativa = document.getElementById('imagen-rotativa')
+
 // GALERIA ARRAY ESTANCIAS
 const galleries = {
 
     acacia: [
+        'media/estancias/villa-savanna-1.jpg',
+        'media/estancias/villa-savanna-2.jpg',
+        'media/estancias/villa-savanna-3.jpg'
+    ],
+
+    kilimanjaro: [
         'media/estancias/villa-savanna-1.jpg',
         'media/estancias/villa-savanna-2.jpg',
         'media/estancias/villa-savanna-3.jpg'
@@ -20,6 +41,9 @@ const modalImage = document.getElementById('modal-image')
 const modalClose = document.getElementById('modal-close')
 const modalNext = document.getElementById('modal-next')
 const modalBack = document.getElementById('modal-back')
+
+let currentGallery = []
+let count = 0
 
 // ----------
 
@@ -39,11 +63,38 @@ document.addEventListener('scroll', e => {
             header.classList.remove('sticky')
         }
 })
+//HERO GALERIA AUTOMATICA
+
+function cambiarImagen() {
+    
+    imagenRotativa.style.opacity = '0'
+    setTimeout (() => {
+        contador++
+        if (contador >= galleryHero.length){
+            contador = 0
+        } 
+        imagenRotativa.src = galleryHero[contador]   
+        imagenRotativa.style.opacity = '100%'
+    
+    }, 300);    
+}
+
+function iniciar() {
+    intervalo = setInterval(cambiarImagen, timer)
+}
+  
+function detener () {
+
+    clearInterval((intervalo))
+}
+    
+imagenRotativa.addEventListener('mouseenter', detener)
+imagenRotativa.addEventListener('mouseleave', iniciar)
+
+iniciar()
+
 
 // GALERIA ARRAY ESTANCIAS
-   
-let currentGallery = []
-let count = 0
 
 galleryImages.forEach((gallery) => {
 
