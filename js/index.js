@@ -1,23 +1,39 @@
-// ----- CONSTANTES -----
+// --------- CONSTANTES ---------
 
-// MENU
+// MENU DESPLEGABLE
 const menu = document.getElementById('menu')
 const toggleMenuIcon = document.getElementById('toggleMenuIcon')
+
+// CABIAR COLOR HEADER
 const header = document.querySelector('.header')
+
 // HERO GALERIA AUTOMATICA
-const galleryHero = [
-    /*['media/estancias/villa-savanna-1.jpg', 'media/estancias/villa-savanna-1.webp', 'media/estancias/villa-savanna-1.avif'],
-    ['media/estancias/villa-savanna-2.jpg', 'media/estancias/villa-savanna-2.webp', 'media/estancias/villa-savanna-2.avif'],
-    ['media/estancias/villa-savanna-3.jpg', 'media/estancias/villa-savanna-3.webp', 'media/estancias/villa-savanna-3.avif']*/
-    'media/estancias/villa-savanna-1.jpg',
-    'media/estancias/villa-savanna-2.jpg',
-    'media/estancias/villa-savanna-3.jpg'
+const heroImages = [
+    {
+        avif: 'media/villa.avif',
+        webp: 'media/villa.webp',
+        jpg: 'media/villa.jpg'
+    },
+
+    {
+        avif: 'media/retiro-luna.avif',
+        webp: 'media/retiro-luna.webp',
+        jpg: 'media/retiro-luna.jpg'
+    },
+
+    {
+        avif: 'media/villa-savanna.avif',
+        webp: 'media/villa-savanna.webp',
+        jpg: 'media/villa-savanna.jpg'
+    }
 ]
 
+const heroAvif = document.getElementById('hero-avif')
+const heroWebp = document.getElementById('hero-webp')
+const heroImage = document.getElementById('hero-image')
+const timer = 1800
+
 let contador = 0
-let intervalo
-const timer = 2500
-const imagenRotativa = document.getElementById('imagen-rotativa')
 
 // GALERIA ARRAY ESTANCIAS
 const galleries = {
@@ -45,7 +61,7 @@ const modalBack = document.getElementById('modal-back')
 let currentGallery = []
 let count = 0
 
-// ----------
+// ------------- FUNCIONES ------------
 
 // MENU DESPLEGABLE
 toggleMenuIcon.addEventListener('click', e => {
@@ -54,18 +70,31 @@ toggleMenuIcon.addEventListener('click', e => {
 })
 
 // CAMBIAR COLOR HEADER
-
 document.addEventListener('scroll', e => {
     console.log(window.scrollY)
-        if(window.scrollY > 320) {
-            header.classList.add('sticky')
-        } else {
-            header.classList.remove('sticky')
-        }
+    if (window.scrollY > 320) {
+        header.classList.add('sticky')
+    } else {
+        header.classList.remove('sticky')
+    }
 })
-//HERO GALERIA AUTOMATICA
 
-function cambiarImagen() {
+//HERO GALERIA AUTOMATICA
+setInterval(() => {
+
+    if (contador >= heroImages.length - 1) {
+        contador = 0
+    } else {
+        contador++
+    }
+
+    heroAvif.srcset = heroImages[contador].avif
+    heroWebp.srcset = heroImages[contador].webp
+    heroImage.src = heroImages[contador].jpg
+
+}, timer)
+
+/*function cambiarImagen() {
     
     imagenRotativa.style.opacity = '0'
     setTimeout (() => {
@@ -91,8 +120,7 @@ function detener () {
 imagenRotativa.addEventListener('mouseenter', detener)
 imagenRotativa.addEventListener('mouseleave', iniciar)
 
-iniciar()
-
+iniciar()*/
 
 // GALERIA ARRAY ESTANCIAS
 
@@ -137,7 +165,7 @@ modalClose.addEventListener('click', e => {
 
 })
 
-// USAR TECLAS 
+// usar teclado 
 document.addEventListener('keydown', e => {
 
     if (modal.classList.contains('hidden')) {
