@@ -21,6 +21,15 @@ Se han creado y reutilizado componentes como:
 - Galería de imágenes
 - Footer
 
+## JavaScript
+
+Se han añadido funcionalidades interactivas utilizando JavaScript básico:
+
+- **Menú desplegable:** apertura y cierre del menú mediante un botón.
+- **Header dinámico:** cambio de estilo al hacer scroll.
+- **Hero automático:** cambio de imágenes cada 1,8 segundos.
+- **Galería de estancias:** apertura de imágenes en un modal con navegación mediante botones o las flechas del teclado. Permite cerrar con la X o la tecla Escape.
+
 ## Navegación
 
 ```mermaid
