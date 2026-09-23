@@ -16,15 +16,21 @@ const heroImages = [
     },
 
     {
-        avif: 'media/retiro-luna.avif',
-        webp: 'media/retiro-luna.webp',
-        jpg: 'media/retiro-luna.jpg'
+        avif: 'media/estancias/suite-kilimanjaro.avif',
+        webp: 'media/estancias/suite-kilimanjaro.webp',
+        jpg: 'media/estancias/suite-kilimanjaro.jpg'
     },
 
     {
         avif: 'media/villa-savanna.avif',
         webp: 'media/villa-savanna.webp',
         jpg: 'media/villa-savanna.jpg'
+    },
+
+    {
+        avif: 'media/estancias/villa-zuri.avif',
+        webp: 'media/estancias/villa-zuri.webp',
+        jpg: 'media/estancias/villa-zuri.jpg'
     }
 ]
 
@@ -39,15 +45,62 @@ let contador = 0
 const galleries = {
 
     acacia: [
-        'media/estancias/villa-savanna-1.jpg',
-        'media/estancias/villa-savanna-2.jpg',
-        'media/estancias/villa-savanna-3.jpg'
+        'media/estancias/refugio-acacia.webp',
+        'media/estancias/refugio-acacia-habitacion.webp',
+        'media/estancias/refugio-acacia-ducha.webp',
+        'media/estancias/refugio-acacia-vista.webp'
     ],
 
     kilimanjaro: [
-        'media/estancias/villa-savanna-1.jpg',
-        'media/estancias/villa-savanna-2.jpg',
-        'media/estancias/villa-savanna-3.jpg'
+        'media/estancias/suite-kilimanjaro.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
+    ],
+
+    mara: [
+        'media/estancias/suite-mara.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
+    ],
+
+    zuri: [
+        'media/estancias/villa-zuri.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
+    ],
+
+    nuru: [
+        'media/estancias/villa-nuru.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
+    ],
+    kalahari: [
+        'media/estancias/villa-kalahari.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
+    ],
+    savanna: [
+        'media/villa-savanna.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
+    ],
+    luna: [
+        'media/retiro-luna.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
+    ],
+    baobab: [
+        'media/suite-baobab.webp',
+        'media/estancias/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro-sala.webp'
     ]
 }
 
@@ -94,33 +147,6 @@ setInterval(() => {
 
 }, timer)
 
-/*function cambiarImagen() {
-    
-    imagenRotativa.style.opacity = '0'
-    setTimeout (() => {
-        contador++
-        if (contador >= galleryHero.length){
-            contador = 0
-        } 
-        imagenRotativa.src = galleryHero[contador]   
-        imagenRotativa.style.opacity = '100%'
-    
-    }, 300);    
-}
-
-function iniciar() {
-    intervalo = setInterval(cambiarImagen, timer)
-}
-  
-function detener () {
-
-    clearInterval((intervalo))
-}
-    
-imagenRotativa.addEventListener('mouseenter', detener)
-imagenRotativa.addEventListener('mouseleave', iniciar)
-
-iniciar()*/
 
 // GALERIA ARRAY ESTANCIAS
 
@@ -199,3 +225,4 @@ document.addEventListener('keydown', e => {
     }
 
 })
+

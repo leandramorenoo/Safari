@@ -60,8 +60,8 @@
 
     <main>
 
-    <!-- HERO -->
-    <section class="hero">
+        <!-- HERO -->
+        <section class="hero">
             <video class="hero__video" autoplay muted loop playsinline poster="media/inicio-banner.webp">
                 <source src="media/video-hero.mp4" type="video/mp4" />
                 <source src="media/video-hero.webm" type="video/webm" />
@@ -281,7 +281,7 @@
             </div>
 
             <div class="contact__form">
-                <form action="#" method="post">
+                <form id="form-reserva" action="#" method="post">
                     <div class="form-row">
                         <div class="form-field">
                             <label class="title-sm" for="name">Nombre completo</label>
@@ -345,7 +345,7 @@
                         <input name="acceptance" id="acceptance" required type="checkbox">
                         <label for="acceptance">He leido y acepto las politicas de privacidad.</label>
                     </div>
-                    <button class="btn btn--green title-sm" type="submit">
+                    <button id="btn-reserva" class="btn btn--green title-sm" type="submit">
                         Enviar Solicitud de Reserva
                     </button>
                 </form>
@@ -353,6 +353,8 @@
         </div>
     </section>
     <!-- /CONTACT -->
+
+
 
     <!-- FOOTER -->
 
