@@ -61,6 +61,29 @@
 
 }
 
+@keyframes go-big {
+    from {
+        max-width: var(--size-max-width);
+        border-radius: var(--radius-full);
+        transform: scale(0.8) translateY(1rem);
+    }
+    to {
+        max-width: 100%;
+        border-radius: 0;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes cutLeft {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -1422,4 +1445,16 @@ label:not([for="acceptance"]) {
     animation: fadein 1s linear 1 forwards;
     animation-timeline: view(block 90% 0%);
     
+}
+
+.scroll-go-big {
+    margin: 0 auto;
+    animation: go-big 1s linear 1 forwards;
+    animation-timeline: view(block 80% 0%);
+}
+
+.scroll-cutLeft {
+    margin: 0 auto;
+    animation: cutLeft 1s linear 1 forwards;
+    animation-timeline: view(block 60% 0%);  
 }
