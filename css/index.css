@@ -1,3 +1,8 @@
+@keyframes fadein {
+    from {opacity: 0%; transform: translateY(0rem);}
+    to {opacity: 100%; transform: translateY(1rem);}
+
+}
 :root {
 
 /* COLORES PRINCIPALES*/ 
@@ -1411,4 +1416,10 @@ label:not([for="acceptance"]) {
 
 .modal__arrow--next {
     right: 2rem;
+}
+
+.scroll-fadein {
+    animation: fadein 1s linear 1 forwards;
+    animation-timeline: view(block 90% 0%);
+    
 }

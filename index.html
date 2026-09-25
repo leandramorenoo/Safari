@@ -36,6 +36,10 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet" />
     <script defer src="js/index.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+    <script>new Lenis({ autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true })</script>
 </head>
 
 <body>
@@ -82,7 +86,7 @@
     <!-- /HERO -->
 
     <!-- INTRODUCTION -->
-    <section class="intro section">
+    <section class="intro section scroll-fadein">
         <div class="intro__block block">
             <div class="intro__content">
                 <div class="intro__info">
@@ -109,7 +113,7 @@
 
     <!-- ADVENTURES -->
 
-    <section class="adventures">
+    <section class="adventures scroll-fadein">
         <div class="adventures__block block section">
             <div class="adventures__head">
                 <h4 class="head-green-light">Aventuras curadas</h4>
@@ -153,7 +157,7 @@
     <!-- /ADVENTURES -->
 
     <!-- ACCOMODATIONS -->
-    <section class="accomodations section">
+    <section class="accomodations section scroll-fadein">
         <div class="accomodations__block">
             <h4>Alojamientos exclusivos</h4>
             <div class="accomodations__head">
@@ -243,7 +247,7 @@
     <!-- /QUOTE -->
 
     <!-- CONTACT -->
-    <section class="contact section">
+    <section class="contact section scroll-fadein">
         <div class="contact__block">
             <div class="contact__info">
                 <h4 class="head-green-light">Su aventura comienza aquí</h4>
