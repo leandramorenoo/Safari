@@ -376,9 +376,8 @@ label:not([for="acceptance"]) {
 }
 
 /* / MENU DESPLEGABLE*/
+
 /* SECTION  HERO */
-
-
 .hero {
     position: relative;
     min-height: 100vh;
@@ -458,10 +457,6 @@ label:not([for="acceptance"]) {
     flex-direction: column;
     gap: var(--spacing-md);
     flex: 1 1 var(--size-min-width);    
-
-    & h4 {
-       color: var(--color-green-light); 
-    }
 
     & h2 {
         color: var(--color-green-dark);
