@@ -1,22 +1,5 @@
 // --------- CONSTANTES ---------
 
-//LOADER LION
-
-// LOADER LION
-
-const loader = document.getElementById('loader')
-
-setTimeout(() => {
-
-    loader.classList.add('fade-out')
-
-    setTimeout(() => {
-        loader.style.display = 'none'
-        document.body.classList.remove('loading')
-    }, 700)
-
-}, 2000)
-
 // CABIAR COLOR HEADER
 const header = document.querySelector('.header')
 
