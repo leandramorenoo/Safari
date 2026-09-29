@@ -3,6 +3,12 @@
     to {opacity: 100%; transform: translateY(1rem);}
 
 }
+
+@keyframes fadein-section {
+    from {opacity: 0%; filter: blur(5px);}
+    to {opacity: 100%; }
+
+}
 :root {
 
 /* COLORES PRINCIPALES*/ 
@@ -58,7 +64,6 @@
 --size-min-width-sm: 13.125rem;
 --size-min-width-md: 28.125rem;
 
-
 }
 
 @keyframes go-big {
@@ -73,6 +78,7 @@
         transform: scale(1) translateY(0);
     }
 }
+
 
 @keyframes cutLeft {
     from {
@@ -1249,7 +1255,7 @@ label:not([for="acceptance"]) {
 
 /* -- /PAGE GALLERY -- */
 
-/* RESPONSIVE */
+/* ----- RESPONSIVE ------*/
 
 /* Tablet */
 @media (max-width: 640px) {
@@ -1348,12 +1354,13 @@ label:not([for="acceptance"]) {
     }
 }
 
-/* GALLERY ARRAY ESTANCIAS*/
+/* ----- /RESPONSIVE ------*/
+
+/* GALLERY ARRAY ESTANCIAS */
 
 .accomodations__gallery {
     cursor: pointer;
 }
-
 
 /* MODAL GALERIA */
 
@@ -1373,11 +1380,9 @@ label:not([for="acceptance"]) {
     z-index: 20;
 }
 
-
 .modal.hidden {
     display: none;
 }
-
 
 .modal__content {
     width: 80%;
@@ -1388,7 +1393,6 @@ label:not([for="acceptance"]) {
     align-items: center;
 }
 
-
 .modal__content img {
     width: auto;
     max-width: 100%;
@@ -1396,7 +1400,6 @@ label:not([for="acceptance"]) {
 
     object-fit: contain;
 }
-
 
 .modal__close {
     position: absolute;
@@ -1412,7 +1415,6 @@ label:not([for="acceptance"]) {
     cursor: pointer;
 }
 
-
 .modal__arrow {
     position: absolute;
     top: 50%;
@@ -1426,20 +1428,26 @@ label:not([for="acceptance"]) {
     cursor: pointer;
 }
 
-
 .modal__arrow--back {
     left: 2rem;
 }
-
 
 .modal__arrow--next {
     right: 2rem;
 }
 
+/* / MODAL GALERIA */
+
+
+/* ANIMATIONS SCROLL */
 .scroll-fadein {
     animation: fadein 1s linear 1 forwards;
-    animation-timeline: view(block 90% 0%);
-    
+    animation-timeline: view(block 99% 0%);
+}
+
+.scroll-fadein-section {
+    animation: fadein-section 1s linear 1 forwards;
+    animation-timeline: view(block 99% 0%);
 }
 
 .scroll-go-big {
@@ -1453,22 +1461,16 @@ label:not([for="acceptance"]) {
     animation: cutLeft 1s linear 1 forwards;
     animation-timeline: view(block 60% 0%);  
 }
-
-
-/**/
-
-/* LOADER */
+/* /ANIMATIONS SCROLL */
 
 /* LOADER */
 
 .loader {
+    background-color: var(--color-green-light);
     position: fixed;
     inset: 0;
-
     width: 100%;
     height: 100vh;
-
-    background-color: var(--color-green-light);
 
     display: flex;
     justify-content: center;
@@ -1476,10 +1478,9 @@ label:not([for="acceptance"]) {
 
     z-index: 9999;
 
-    opacity: 1;
+    opacity: 100%;
     transition: opacity 0.5s ease;
 }
-
 
 .loader__lion {
     display: block;
@@ -1494,3 +1495,4 @@ label:not([for="acceptance"]) {
 body.loading {
     overflow: hidden;
 }
+/* /LOADER */
