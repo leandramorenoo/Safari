@@ -1476,7 +1476,7 @@ label:not([for="acceptance"]) {
     justify-content: center;
     align-items: center;
 
-    z-index: 9999;
+    z-index: 90;
 
     opacity: 100%;
     transition: opacity 0.5s ease;
