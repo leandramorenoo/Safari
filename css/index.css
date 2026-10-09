@@ -84,7 +84,6 @@
     from {
         clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
-
     to {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
@@ -137,12 +136,10 @@ h4, .title-sm {
     text-transform: uppercase;
     font: var(--font-title-sm);
     letter-spacing: 0.1rem;
-
 }
 
 .title-small {
     font: var(--font-small-title);
-
 }
 .font-btn {
     text-transform: uppercase;
@@ -178,7 +175,6 @@ h4, .title-sm {
 
 }
 
-
 .btn {
     display: inline-block;
     padding: var(--spacing-xxs) var(--spacing-md);
@@ -203,7 +199,6 @@ h4, .title-sm {
             background-color: var(--color-cream);
             color: var(--color-green-dark);
         }
-
     }
 
     &.btn--border--green {
@@ -215,7 +210,6 @@ h4, .title-sm {
             background-color: var(--color-green-dark);
             color: var(--color-cream);
         }
-
     }
 
     &.btn--green {
@@ -278,7 +272,6 @@ h4, .title-sm {
 
 .header__block {
     position: relative;
-    
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -292,7 +285,6 @@ h4, .title-sm {
     &img{
         border-radius: none;
     }
-    
 }
 
 .header__button {
@@ -338,7 +330,6 @@ h4, .title-sm {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-
 .menu__close-button {
     display: none;
     position: absolute;
@@ -371,8 +362,7 @@ h4, .title-sm {
     &:hover {
        color: var(--color-beige);
        transform: scale(1.1);
-    } 
-    
+        }   
     }
 }
 
@@ -622,7 +612,6 @@ h4, .title-sm {
         color: var(--color-cream);
         text-align: center;
     }
-
 }
 .quote__icon {
     width: 3rem;
@@ -661,7 +650,6 @@ h4, .title-sm {
     & h2 {
         color: var(--color-green-dark);
     }
-   
 }
 
 .icons__row {
@@ -842,7 +830,6 @@ h4, .title-sm {
 /* /SECTION HERO */
 
 /* /SECTION ACCOMODATIONS FULL */
-
 .estancias {
     padding: var(--spacing-xl) var(--spacing-md) var(--spacing-xxxl) var(--spacing-md);
     max-width: var(--size-max-width);
@@ -854,14 +841,12 @@ h4, .title-sm {
     flex-direction: column;
     gap: var(--spacing-xs);
     padding-bottom: var(--spacing-md);
-
 }
 
 .estancias__row {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(min(100%, var(--size-min-width-md)), 1fr));
     gap: var(--spacing-lg);
-
 }
 
 .estancias__about {
@@ -890,9 +875,7 @@ h4, .title-sm {
 
 /* /SECTION ACCOMODATIONS PREMIUM */
 
-
 /* EXPERIENCES */
-
 .experiences {
     background-color: var(--color-brown-dark);
 }
@@ -1133,7 +1116,6 @@ h4, .title-sm {
     gap: var(--spacing-xxs);
 }
 
-
 .galeria__item {
     overflow: hidden;
     border-radius: var(--radius-sm);
@@ -1157,7 +1139,6 @@ h4, .title-sm {
     border-radius: 0;
     }
 }
-
 
 .galeria__item--elefantes {
     grid-column: 1 / 4;
