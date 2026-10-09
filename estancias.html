@@ -47,33 +47,34 @@
 <body>
     <header class="header">
         <div class="header__block">
-            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú"><i
-                    class="ri-menu-line"></i></button>
-            <a class="logo" title="Nuru Safari" href="index.html"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
-            <a class="btn btn--white font-btn header__button" href="contacto.html">Reservar</a>
+            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú"><i class="ri-menu-line"></i></button>
+            <button class="header__menu-button menu__close-button" aria-label="Cerrar menú"><i class="ri-close-line"></i></button>
+            <a class="logo" href="index.html" title="Inicio de Nuru Safari"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
+            <a class="btn btn--white font-btn header__button" href="contacto.html" title="Reservar estancia">Reservar</a>
         </div>
 
         <nav id="menu" class="menu hidden">
             <ul class="menu__list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="estancias.html">Estancias</a></li>
-                <li><a href="experiencias.html">Experiencias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="index.html" title="Ir al inicio">Inicio</a></li>
+                <li><a href="estancias.html" title="Ver alojamientos">Estancias</a></li>
+                <li><a href="experiencias.html" title="Ver experiencias">Experiencias</a></li>
+                <li><a href="contacto.html#mapa_contacto" title="Contactar">Contacto</a></li>
+                <li><a href="galeria.html" title="Ver galería">Galería</a></li>
+                <li><a class="btn btn--border font-btn" href="contacto.html" title="Reservar">Reservar</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
         <!-- HERO -->
-        <section class="hero__estancias">
+        <div class="hero__estancias">
             <picture id="imagen-rotativa">
                 <source id="hero-avif" class="imagen-cambia" srcset="media/villa.avif" type="image/avif">
                 <source id="hero-wepb" srcset="media/villa.webp" type="image/webp">
                 <img id="hero-image" src="media/villa.jpg" alt="Vista panorámica de una villa de lujo en Africa."
                     title="Villa Savanna vista panorámica" loading="lazy">
             </picture>
-        </section>
+        </div>
     </main>
     <!-- /HERO -->
 
@@ -108,7 +109,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Piscina privada</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Terraza panorámica</li>
                         </ul>
-                        <a class="btn btn--border--green font-btn" href="contacto.html">Reservar Villa</a>
+                        <a class="btn btn--border--green font-btn" href="contacto.html" title="Reservar Refugio Acacia">Reservar Villa</a>
                     </div>
                 </li>
 
@@ -134,7 +135,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Ventanales panorámicos</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Bañera con vistas</li>
                         </ul>
-                        <a class="btn btn--border--green font-btn" href="contacto.html">Reservar Suite</a>
+                        <a class="btn btn--border--green font-btn" href="contacto.html" title="Reservar Suite Kilimanjaro">Reservar Suite</a>
                     </div>
                 </li>
 
@@ -159,7 +160,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Terraza con vistas</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Jacuzzi exterior</li>
                         </ul>
-                        <a class="btn btn--border--green font-btn" href="contacto.html">Reservar Suite</a>
+                        <a class="btn btn--border--green font-btn" href="contacto.html" title="Reservar Suite Mara">Reservar Suite</a>
                     </div>
                 </li>
 
@@ -184,7 +185,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Piscina infinity</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Sala exterior privada</li>
                         </ul>
-                        <a class="btn btn--border--green font-btn" href="contacto.html">Reservar Villa</a>
+                        <a class="btn btn--border--green font-btn" href="contacto.html" title="Reservar Villa Zuri">Reservar Villa</a>
                     </div>
                 </li>
 
@@ -209,7 +210,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Piscina privada panorámica</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Fogata y comedor exterior</li>
                         </ul>
-                        <a class="btn btn--border--green font-btn" href="contacto.html">Reservar Villa</a>
+                        <a class="btn btn--border--green font-btn" href="contacto.html" title="Reservar Villa Nuru">Reservar Villa</a>
                     </div>
                 </li>
 
@@ -234,7 +235,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Dormitorios privados</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Piscina y zona de descanso</li>
                         </ul>
-                        <a class="btn btn--border--green font-btn" href="contacto.html">Reservar Villa</a>
+                        <a class="btn btn--border--green font-btn" href="contacto.html" title="Reservar Villa Kalahari">Reservar Villa</a>
                     </div>
                 </li>
             </ul>
@@ -281,7 +282,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Área de juegos interior y exterior</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Fogata y comedor exterior</li>
                         </ul>
-                        <a class="btn btn--green font-btn" href="contacto.html">Reservar Villa</a>
+                        <a class="btn btn--green font-btn" href="contacto.html" title="Reservar Villa Savanna">Reservar Villa</a>
                     </div>
                 </div>
 
@@ -302,7 +303,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Terraza con vistas</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Área de juegos interior</li>
                         </ul>
-                        <a class="btn btn--green font-btn" href="contacto.html">Reservar Retiro</a>
+                        <a class="btn btn--green font-btn" href="contacto.html" title="Reservar Retiro Luna">Reservar Retiro</a>
                     </div>
 
                     <div class="intro__img">
@@ -343,7 +344,7 @@
                             <li><i class="ri-arrow-drop-right-line"></i> Vistas entre los árboles</li>
                             <li><i class="ri-arrow-drop-right-line"></i> Piscina y jacuzzi privado</li>
                         </ul>
-                        <a class="btn btn--green font-btn" href="contacto.html">Reservar Suite</a>
+                        <a class="btn btn--green font-btn" href="contacto.html" title="Reservar Suite Baobab">Reservar Suite</a>
                     </div>
                 </div>
             </div>
@@ -410,8 +411,8 @@
             </div>
 
             <div class="cta__btn">
-                <a class="btn btn--white font-btn" href="contacto.html">Reservar mi estancia</a>
-                <a class="btn btn--border font-btn" href="contacto.html#mapa_contacto">Contactar asesor</a>
+                <a class="btn btn--white font-btn" href="contacto.html" title="Solicitar reserva">Reservar mi estancia</a>
+                <a class="btn btn--border font-btn" href="contacto.html#mapa_contacto" title="Contactar asesor">Contactar asesor</a>
             </div>
         </div>
     </section>
@@ -423,25 +424,25 @@
     <footer>
         <div class="footer__block">
             <div class="footer__row">
-                <a class="footer__logo" title="Nuru Safari" href="index.html"><img src="media/logo-green.svg"
+                <a class="footer__logo" href="index.html" title="Volver al inicio"><img src="media/logo-green.svg"
                         alt="Nuru Safari"></a>
                 <ul class="footer__social">
-                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Abrir Instagram"><i
                                 class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="Abrir TikTok"><i
                                 class="ri-tiktok-line"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Abrir Facebook"><i
                                 class="ri-facebook-circle-line"></i></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="Abrir YouTube"><i
                                 class="ri-youtube-line"></i></a></li>
                 </ul>
             </div>
 
             <div class="footer__row legal">
                 <ul class="footer__legal">
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
-                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#" title="Política de privacidad">Política de Privacidad</a></li>
+                    <li><a href="#" title="Política de cookies">Política de Cookies</a></li>
+                    <li><a href="#" title="Aviso legal">Aviso Legal</a></li>
                 </ul>
                 <p>© 2026 Nuru Safari — Todos los derechos reservados.</p>
             </div>

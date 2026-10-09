@@ -47,33 +47,31 @@
 <body>
     <header class="header header__contact">
         <div class="header__block">
-            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú"><i
-                    class="ri-menu-line"></i></button>
-            <a class="logo" title="Nuru Safari" href="index.html"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
-            <a class="btn btn--white font-btn header__button" href="contacto.html">Reservar</a>
+            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú"><i class="ri-menu-line"></i></button>
+            <button class="header__menu-button menu__close-button" aria-label="Cerrar menú"><i class="ri-close-line"></i></button>
+            <a class="logo" href="index.html" title="Inicio de Nuru Safari"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
+            <a class="btn btn--white font-btn header__button" href="contacto.html" title="Reservar estancia">Reservar</a>
         </div>
 
         <nav id="menu" class="menu hidden">
             <ul class="menu__list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="estancias.html">Estancias</a></li>
-                <li><a href="experiencias.html">Experiencias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="index.html" title="Ir al inicio">Inicio</a></li>
+                <li><a href="estancias.html" title="Ver alojamientos">Estancias</a></li>
+                <li><a href="experiencias.html" title="Ver experiencias">Experiencias</a></li>
+                <li><a href="contacto.html#mapa_contacto" title="Contactar">Contacto</a></li>
+                <li><a href="galeria.html" title="Ver galería">Galería</a></li>
+                <li><a class="btn btn--border font-btn" href="contacto.html" title="Reservar">Reservar</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
         <!-- HERO -->
-        <section>
-
-        </section>
     </main>
     <!-- /HERO -->
 
     <!-- FORM -->
-    <section class="formulario section scroll-fadein">
+    <section class="formulario section">
         <div class="estancias__block block">
             <div class="estancias__head">
                 <span class="head-green-light">Tu próxima aventura</span>
@@ -187,14 +185,14 @@
                         <i class="ri-map-pin-2-line"></i>
                         <ul>
                             <li class="title-sm">Ubicación</li>
-                            <li><a href="https://maps.app.goo.gl/KWBfh21aofwgQFsM7" target="_blank">Masái Mara, Kenia</a></li>
+                            <li><a href="https://maps.app.goo.gl/KWBfh21aofwgQFsM7" target="_blank" title="Ver ubicación en Maps">Masái Mara, Kenia</a></li>
                         </ul>
                     </div>
                     <div class="icons__row">
                         <i class="ri-mail-line"></i>
                         <ul>
                             <li class="title-sm">Correo electrónico</li>
-                            <li><a href="mailto:reservas@nurusafari.com" target="_blank">
+                            <li><a href="mailto:reservas@nurusafari.com" target="_blank" title="Enviar correo">
                             info@nurusafari.com</a></li>
                         </ul>
                     </div>
@@ -203,7 +201,7 @@
                         <i class="ri-phone-line"></i>
                         <ul>
                             <li class="title-sm">Teléfono</li>
-                            <a href="tel:+255123456789" target="_blank"> +255 123 456 789</a>
+                            <li><a href="tel:+255123456789" target="_blank" title="Llamar por teléfono"> +255 123 456 789</a></li>
                         </ul>
                     </div>
                 </div>
@@ -222,25 +220,25 @@
     <footer>
         <div class="footer__block">
             <div class="footer__row">
-                <a class="footer__logo" title="Nuru Safari" href="index.html"><img src="media/logo-green.svg"
+                <a class="footer__logo" href="index.html" title="Volver al inicio"><img src="media/logo-green.svg"
                         alt="Nuru Safari"></a>
                 <ul class="footer__social">
-                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Abrir Instagram"><i
                                 class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="Abrir TikTok"><i
                                 class="ri-tiktok-line"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Abrir Facebook"><i
                                 class="ri-facebook-circle-line"></i></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="Abrir YouTube"><i
                                 class="ri-youtube-line"></i></a></li>
                 </ul>
             </div>
 
             <div class="footer__row legal">
                 <ul class="footer__legal">
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
-                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#" title="Política de privacidad">Política de Privacidad</a></li>
+                    <li><a href="#" title="Política de cookies">Política de Cookies</a></li>
+                    <li><a href="#" title="Aviso legal">Aviso Legal</a></li>
                 </ul>
                 <p>© 2026 Nuru Safari — Todos los derechos reservados.</p>
             </div>

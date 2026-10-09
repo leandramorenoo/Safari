@@ -11,4 +11,4 @@ setTimeout(() => {
         document.body.classList.remove('loading')
     }, 700)
 
-}, 1800)
+}, 1600)

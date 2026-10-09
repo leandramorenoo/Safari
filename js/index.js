@@ -118,6 +118,11 @@ toggleMenuIcon.addEventListener('click', e => {
     toggleMenuIcon.classList.toggle('white')
 })
 
+document.querySelector('.menu__close-button').addEventListener('click', e => {
+    menu.classList.add('hidden')
+    toggleMenuIcon.classList.remove('white')
+})
+
 // CAMBIAR COLOR HEADER
 document.addEventListener('scroll', e => {
     console.log(window.scrollY)

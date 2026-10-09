@@ -59,19 +59,20 @@
 
     <header class="header">
         <div class="header__block">
-            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú"><i
-                    class="ri-menu-line"></i></button>
-            <a class="logo" title="Nuru Safari" href="index.html"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
-            <a class="btn btn--white font-btn header__button" href="contacto.html">Reservar</a>
+            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú"><i class="ri-menu-line"></i></button>
+            <button class="header__menu-button menu__close-button" aria-label="Cerrar menú"><i class="ri-close-line"></i></button>
+            <a class="logo" href="index.html" title="Inicio de Nuru Safari"><img src="media/logo-white.svg" alt="Nuru Safari"></a>
+            <a class="btn btn--white font-btn header__button" href="contacto.html" title="Reservar estancia">Reservar</a>
         </div>
 
         <nav id="menu" class="menu hidden">
             <ul class="menu__list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="estancias.html">Estancias</a></li>
-                <li><a href="experiencias.html">Experiencias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="index.html" title="Ir al inicio">Inicio</a></li>
+                <li><a href="estancias.html" title="Ver alojamientos">Estancias</a></li>
+                <li><a href="experiencias.html" title="Ver experiencias">Experiencias</a></li>
+                <li><a href="contacto.html#mapa_contacto" title="Contactar">Contacto</a></li>
+                <li><a href="galeria.html" title="Ver galería">Galería</a></li>
+                <li><a class="btn btn--border font-btn" href="contacto.html" title="Reservar">Reservar</a></li>
             </ul>
         </nav>
     </header>
@@ -90,7 +91,7 @@
 
                     <span class="title-xl">Despierta entre la calma salvaje de la sabana</span>
                     <h1 class="font-btn">Safari de lujo en África</h1>
-                    <a class="btn btn--border font-btn" href="experiencias.html">Ver experiencias</a>
+                    <a class="btn btn--border font-btn" href="experiencias.html" title="Descubrir experiencias">Ver experiencias</a>
                 </div>
             </div>
         </section>
@@ -107,7 +108,7 @@
                     <p>En Nuru Safari, no solo ofrecemos una estancia; curamos un diálogo entre el alma y el
                         horizonte infinito. Nuestra arquitectura minimalista respeta la topografía del terreno,
                         utilizando materiales nobles que envejecen con la gracia del continente.</p>
-                    <a class="btn--small" href="#">Descubra nuestro proposito <i class="ri-arrow-right-line"></i></a>
+                    <a class="btn--small" href="#" title="Nuestro propósito">Descubra nuestro proposito <i class="ri-arrow-right-line"></i></a>
                 </div>
 
                 <div class="intro__img">
@@ -173,17 +174,19 @@
             <span class="head-green-light">Alojamientos exclusivos</span>
             <div class="accomodations__head">
                 <h2>Su Santuario en la Sabana</h2>
-                <a class="btn btn--border--green font-btn" href="estancias.html">Ver todas las estancias</a>
+                <a class="btn btn--border--green font-btn" href="estancias.html" title="Ver todas las estancias">Ver todas las estancias</a>
             </div>
 
             <ul class="accomodations__row">
                 <li class="accomodations__card">
+                    <a href="estancias.html#villa_savanna" title="Ver Villa Savanna">
                     <picture>
                         <source srcset="media/villa-savanna.avif" type="image/avif">
                         <source srcset="media/villa-savanna.webp" type="image/webp">
                         <img src="media/villa-savanna.jpg" alt="Sala principal de una villa de Nuru Safari"
                             title="Villa con vistas a la sabana" loading="lazy">
                     </picture>
+                    </a>
 
                     <div class="accomodations__info">
                         <h3>Villa Savanna</h3>
@@ -193,11 +196,12 @@
                         </ul>
                         <p>Horizontes infinitos, espacios abiertos y la sabana extendiéndose ante ti en absoluta
                             privacidad.</p>
-                        <a class="btn--small title-sm" href="estancias.html#villa_savanna">Explorar Villa</a>
+                        <a class="btn--small title-sm" href="estancias.html#villa_savanna" title="Explorar Villa Savanna">Explorar Villa</a>
                     </div>
                 </li>
 
                 <li class="accomodations__card">
+                    <a href="estancias.html#retiro_luna" title="Ver Retiro Luna">
                     <picture>
                         <source srcset="media/retiro-luna.avif" type="image/avif">
                         <source srcset="media/retiro-luna.webp" type="image/webp">
@@ -205,6 +209,7 @@
                             alt="Terraza y piscina privada de Retiro Luna con vistas a la sabana"
                             title="Retiro de lujo con vistas a la sabana" loading="lazy">
                     </picture>
+                    </a>
 
                     <div class="accomodations__info">
                         <h3>Retiro Luna</h3>
@@ -214,11 +219,12 @@
                         </ul>
                         <p>Un santuario privado para compartir, con piscina infinita y vistas que se pierden en la
                             sabana.</p>
-                        <a class="btn--small title-sm" href="estancias.html#retiro_luna">Explorar Retiro</a>
+                        <a class="btn--small title-sm" href="estancias.html#retiro_luna" title="Explorar Retiro Luna">Explorar Retiro</a>
                     </div>
                 </li>
 
                 <li class="accomodations__card">
+                    <a href="estancias.html#suite_baobab" title="Ver Suite Baobab">
                     <picture>
                         <source srcset="media/suite-baobab.avif" type="image/avif">
                         <source srcset="media/suite-baobab.webp" type="image/webp">
@@ -226,6 +232,7 @@
                             alt="Dormitorio de Suite Baobab integrado entre árboles de la sabana"
                             title="Suite de lujo entre árboles" loading="lazy">
                     </picture>
+                    </a>
 
                     <div class="accomodations__info">
                         <h3>Suite Baobab</h3>
@@ -235,7 +242,7 @@
                         </ul>
                         <p>Una suite suspendida entre árboles centenarios, creada para desconectar y vivir África desde
                             dentro.</p>
-                        <a class="btn--small title-sm" href="estancias.html#suite_baobab">Explorar Suite</a>
+                        <a class="btn--small title-sm" href="estancias.html#suite_baobab" title="Explorar Suite Baobab">Explorar Suite</a>
                     </div>
                 </li>
             </ul>
@@ -273,7 +280,7 @@
                     <i class="ri-map-pin-2-line"></i>
                     <ul>
                         <li class="title-sm">Ubicación</li>
-                        <li><a href="https://maps.app.goo.gl/KWBfh21aofwgQFsM7" target="_blank">Masái Mara, Kenia</a>
+                        <li><a href="https://maps.app.goo.gl/KWBfh21aofwgQFsM7" target="_blank" title="Ver ubicación en Maps">Masái Mara, Kenia</a>
                         </li>
                     </ul>
                 </div>
@@ -281,7 +288,7 @@
                     <i class="ri-mail-line"></i>
                     <ul>
                         <li class="title-sm">Correo electrónico</li>
-                        <li><a href="mailto:reservas@nurusafari.com" target="_blank">
+                        <li><a href="mailto:reservas@nurusafari.com" target="_blank" title="Enviar correo">
                                 info@nurusafari.com</a></li>
                     </ul>
                 </div>
@@ -290,7 +297,7 @@
                     <i class="ri-phone-line"></i>
                     <ul>
                         <li class="title-sm">Teléfono</li>
-                        <a href="tel:+255123456789" target="_blank"> +255 123 456 789</a>
+                        <li><a href="tel:+255123456789" target="_blank" title="Llamar por teléfono"> +255 123 456 789</a></li>
                     </ul>
                 </div>
             </div>
@@ -374,25 +381,25 @@
     <footer>
         <div class="footer__block">
             <div class="footer__row">
-                <a class="footer__logo" title="Nuru Safari" href="index.html"><img src="media/logo-green.svg"
+                <a class="footer__logo" href="index.html" title="Volver al inicio"><img src="media/logo-green.svg"
                         alt="Nuru Safari"></a>
                 <ul class="footer__social">
-                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Abrir Instagram"><i
                                 class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="Abrir TikTok"><i
                                 class="ri-tiktok-line"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Abrir Facebook"><i
                                 class="ri-facebook-circle-line"></i></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="Abrir YouTube"><i
                                 class="ri-youtube-line"></i></a></li>
                 </ul>
             </div>
 
             <div class="footer__row legal">
                 <ul class="footer__legal">
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
-                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#" title="Política de privacidad">Política de Privacidad</a></li>
+                    <li><a href="#" title="Política de cookies">Política de Cookies</a></li>
+                    <li><a href="#" title="Aviso legal">Aviso Legal</a></li>
                 </ul>
                 <p>© 2026 Nuru Safari — Todos los derechos reservados.</p>
             </div>
