@@ -6,27 +6,27 @@ const header = document.querySelector('.header')
 // HERO GALERIA AUTOMATICA
 const heroImages = [
     {
-        avif: 'media/villa.avif',
-        webp: 'media/villa.webp',
-        jpg: 'media/villa.jpg'
+        avif: 'media/estancias/vistas/villa.avif',
+        webp: 'media/estancias/vistas/villa.webp',
+        jpg: 'media/estancias/vistas/villa.jpg'
     },
 
     {
-        avif: 'media/estancias/suite-kilimanjaro.avif',
-        webp: 'media/estancias/suite-kilimanjaro.webp',
-        jpg: 'media/estancias/suite-kilimanjaro.jpg'
+        avif: 'media/estancias/suite-kilimanjaro/suite-kilimanjaro.avif',
+        webp: 'media/estancias/suite-kilimanjaro/suite-kilimanjaro.webp',
+        jpg: 'media/estancias/suite-kilimanjaro/suite-kilimanjaro.jpg'
     },
 
     {
-        avif: 'media/villa-savanna.avif',
-        webp: 'media/villa-savanna.webp',
-        jpg: 'media/villa-savanna.jpg'
+        avif: 'media/estancias/villa-savanna/villa-savanna.avif',
+        webp: 'media/estancias/villa-savanna/villa-savanna.webp',
+        jpg: 'media/estancias/villa-savanna/villa-savanna.jpg'
     },
 
     {
-        avif: 'media/estancias/villa-zuri.avif',
-        webp: 'media/estancias/villa-zuri.webp',
-        jpg: 'media/estancias/villa-zuri.jpg'
+        avif: 'media/estancias/villa-zuri/villa-zuri.avif',
+        webp: 'media/estancias/villa-zuri/villa-zuri.webp',
+        jpg: 'media/estancias/villa-zuri/villa-zuri.jpg'
     }
 ]
 
@@ -41,62 +41,62 @@ let contador = 0
 const galleries = {
 
     acacia: [
-        'media/estancias/refugio-acacia.webp',
-        'media/estancias/refugio-acacia-habitacion.webp',
-        'media/estancias/refugio-acacia-ducha.webp',
-        'media/estancias/refugio-acacia-vista.webp'
+        'media/estancias/refugio-acacia/refugio-acacia.webp',
+        'media/estancias/refugio-acacia/refugio-acacia-habitacion.webp',
+        'media/estancias/refugio-acacia/refugio-acacia-ducha.webp',
+        'media/estancias/refugio-acacia/refugio-acacia-vista.webp'
     ],
 
     kilimanjaro: [
-        'media/estancias/suite-kilimanjaro.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ],
 
     mara: [
-        'media/estancias/suite-mara.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/suite-mara/suite-mara.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ],
 
     zuri: [
-        'media/estancias/villa-zuri.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/villa-zuri/villa-zuri.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ],
 
     nuru: [
-        'media/estancias/villa-nuru.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/villa-nuru/villa-nuru.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ],
     kalahari: [
-        'media/estancias/villa-kalahari.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/villa-kalahari/villa-kalahari.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ],
     savanna: [
-        'media/villa-savanna.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/villa-savanna/villa-savanna.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ],
     luna: [
-        'media/retiro-luna.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/retiro-luna/retiro-luna.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ],
     baobab: [
-        'media/suite-baobab.webp',
-        'media/estancias/suite-kilimanjaro-habitacion.webp',
-        'media/estancias/suite-kilimanjaro-ducha.webp',
-        'media/estancias/suite-kilimanjaro-sala.webp'
+        'media/estancias/suite-baobab/suite-baobab.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
+        'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
     ]
 }
 
