@@ -22,8 +22,6 @@
 --color-brown-dark: #3A2519;
 
 /* COLORES ACENTOS*/ 
---color-terracota: #B55D3E;
---color-blue: #347481;
 --color-transparent: rgba(0, 0, 0, 0);
 --color-black-30: rgba(0, 0, 0, 0.3);
 --color-black-80: rgba(0, 0, 0, 0.8);
@@ -633,7 +631,7 @@ label:not([for="acceptance"]) {
     padding-top: var(--spacing-xs);
     color: var(--color-green-dark);
 
-    & h3 {
+    & h2, & h3 {
     color: var(--color-brown-dark);
     }
 }
