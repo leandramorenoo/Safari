@@ -1289,6 +1289,25 @@ label:not([for="acceptance"]) {
 
 /* ----- RESPONSIVE ------*/
 
+@media (min-width: 641px) and (hover: hover) and (pointer: fine) {
+    .adventures .adventures__item {
+        border-radius: var(--radius-sm);
+
+        &::after {
+            pointer-events: none;
+        }
+    }
+
+    .adventures .adventures__video {
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+
+        }
+    }
+}
+
 /* Tablet */
 @media (max-width: 640px) {
 
@@ -1311,6 +1330,19 @@ label:not([for="acceptance"]) {
         grid-column: auto;
         grid-row: auto;
     }
+    .adventures .adventures__row {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: calc(100% - var(--spacing-md) - var(--spacing-xs));
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .adventures .adventures__item {
+        min-width: 0;
+        scroll-snap-align: start;
+    }
+
     .adventures__video {
         height: 25rem;
     }
