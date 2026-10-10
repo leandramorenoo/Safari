@@ -312,6 +312,14 @@ h4, .title-sm {
     z-index: 11;
 
     justify-self: start;
+
+    @media (hover: hover) and (pointer: fine) {
+        transition: transform 0.25s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 .header__menu-button.white {
@@ -345,6 +353,12 @@ h4, .title-sm {
     right: 0;
     transform: translateY(-50%);
     font-size: calc(var(--size-icon-md) * 1.1);
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: translateY(-50%) scale(1.05);
+        }
+    }
 }
 
 .header__menu-button.white {
@@ -1377,6 +1391,14 @@ h4, .title-sm {
     color: var(--color-beige);
     font-size: 2rem;
     cursor: pointer;
+
+    @media (hover: hover) and (pointer: fine) {
+        transition: transform 0.25s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 .modal__arrow {
@@ -1387,6 +1409,14 @@ h4, .title-sm {
     color: var(--color-beige);
     font-size: 1.7rem;
     cursor: pointer;
+
+    @media (hover: hover) and (pointer: fine) {
+        transition: transform 0.25s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 .modal__arrow--back {
