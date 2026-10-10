@@ -157,6 +157,14 @@ h4, .title-sm {
     letter-spacing: 0.1rem; 
 }
 
+.adventures,
+.accomodations,
+.contact {
+    & .head-green-light {
+        color: var(--color-green-dark);
+    }
+}
+
 .head-green-dark {
     color: var(--color-green-dark);
     padding-bottom: var(--spacing-xs);
@@ -591,7 +599,7 @@ h4, .title-sm {
 .accomodations__icons {
     display: flex;
     gap: var(--spacing-sm);
-    color: var(--color-green-light);
+    color: var(--color-green-dark);
     font: var(--font-body-small);
 }
 
@@ -627,7 +635,7 @@ h4, .title-sm {
         color: var(--color-beige);
     }
     & span {
-        color: var(--color-green-light);
+        color: var(--color-beige);
     }
 }
 
@@ -1427,7 +1435,7 @@ h4, .title-sm {
     justify-content: center;
     align-items: center;
 
-    z-index: 90;
+    z-index: 30;
 
     opacity: 100%;
     transition: opacity 0.5s ease;
