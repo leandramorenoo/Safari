@@ -1123,6 +1123,20 @@ h4, .title-sm {
 
 /* -- PAGE GALLERY -- */
 
+/* HERO STICKY */
+#galeria .hero {
+    position: sticky;
+    top: 0;
+    z-index: 0;
+}
+
+#galeria-contenido {
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-cream);
+}
+/* /HERO STICKY */
+
 /*SECTION INTRO*/
 .galeria-intro{
     background-color: var(--color-green-dark);

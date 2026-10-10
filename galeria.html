@@ -17,7 +17,8 @@
     <meta property="og:title" content="Nuru | Galería" />
     <meta property="og:description"
         content="Recorre la galería de Nuru Safari: la sabana, la fauna y los rincones del refugio, capturados en imágenes que muestran la calma y la elegancia de África." />
-    <meta property="og:image" content="https://leandramorenoo.github.io/Safari/media/compartidos/banners/inicio-banner.jpg" />
+    <meta property="og:image"
+        content="https://leandramorenoo.github.io/Safari/media/compartidos/banners/inicio-banner.jpg" />
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -25,7 +26,8 @@
     <meta property="twitter:title" content="Nuru | Galería" />
     <meta property="twitter:description"
         content="Recorre la galería de Nuru Safari: la sabana, la fauna y los rincones del refugio, capturados en imágenes que muestran la calma y la elegancia de África." />
-    <meta property="twitter:image" content="https://leandramorenoo.github.io/Safari/media/compartidos/banners/inicio-banner.jpg" />
+    <meta property="twitter:image"
+        content="https://leandramorenoo.github.io/Safari/media/compartidos/banners/inicio-banner.jpg" />
 
     <link rel="icon" type="image/svg+xml" href="media/compartidos/iconos/favicon.svg" />
     <link rel="stylesheet" href="css/index.css">
@@ -33,24 +35,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet" />
     <!-- Lenis -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
-    <script>new Lenis({ autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true })</script>
+    <script>new Lenis({autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true})</script>
     <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.1/dist/dotlottie-wc.js"></script>
-    
+
     <script defer src="js/index.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header__block">
-            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú" title="Abrir o cerrar menú"><i class="ri-menu-line"></i></button>
-            <button class="header__menu-button menu__close-button" aria-label="Cerrar menú" title="Cerrar menú"><i class="ri-close-line"></i></button>
-            <a class="logo" href="index.html" title="Inicio de Nuru Safari"><img src="media/compartidos/logos/logo-white.svg" alt="Nuru Safari"></a>
-            <a class="btn btn--white font-btn header__button" href="contacto.html" title="Reservar estancia">Reservar</a>
+            <button id="toggleMenuIcon" class="header__menu-button" aria-label="Abrir menú"
+                title="Abrir o cerrar menú"><i class="ri-menu-line"></i></button>
+            <button class="header__menu-button menu__close-button" aria-label="Cerrar menú" title="Cerrar menú"><i
+                    class="ri-close-line"></i></button>
+            <a class="logo" href="index.html" title="Inicio de Nuru Safari"><img
+                    src="media/compartidos/logos/logo-white.svg" alt="Nuru Safari"></a>
+            <a class="btn btn--white font-btn header__button" href="contacto.html"
+                title="Reservar estancia">Reservar</a>
         </div>
 
         <nav id="menu" class="menu hidden">
@@ -65,11 +73,12 @@
         </nav>
     </header>
 
-    <main>
+    <main id="galeria">
         <!-- HERO -->
 
         <div class="hero hero__experiencias">
-            <video class="hero__video" autoplay muted loop playsinline poster="media/compartidos/banners/inicio-banner.webp">
+            <video class="hero__video" autoplay muted loop playsinline
+                poster="media/compartidos/banners/inicio-banner.webp">
                 <source src="media/compartidos/videos/video-hero.mp4" type="video/mp4" />
                 <source src="media/compartidos/videos/video-hero.webm" type="video/webm" />
             </video>
@@ -78,192 +87,203 @@
 
         <!-- /HERO -->
 
-        <!-- GALLERIA INTRO -->
-        <section class="galeria-intro">
-            <div class="adventures__block block section">
-                <div class="adventures__head">
-                    <h1 class="head-green-light">Galería Nuru</h1>
-                    <h2 class="scroll-cutLeft">La Belleza de lo Extraordinario</h2>
-                    <p>Naturaleza, arquitectura y momentos que revelan una forma distinta de vivir África.</p>
+        <div id="galeria-contenido">
+            <!-- GALLERIA INTRO -->
+            <section class="galeria-intro">
+                <div class="adventures__block block section">
+                    <div class="adventures__head">
+                        <h1 class="head-green-light">Galería Nuru</h1>
+                        <h2 class="scroll-cutLeft">La Belleza de lo Extraordinario</h2>
+                        <p>Naturaleza, arquitectura y momentos que revelan una forma distinta de vivir África.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- /GALLERIA INTRO -->
+
+
+            <!-- GALERIA -->
+            <div class="galeria">
+                <div class="galeria__block block section">
+
+                    <ul class="galeria__grid">
+
+                        <!-- ELEFANTES -->
+                        <li class="galeria__item galeria__item--elefantes">
+                            <picture>
+                                <source srcset="media/galeria/elefantes.avif" type="image/avif"
+                                    media="(min-width: 0px)">
+                                <source srcset="media/galeria/elefantes.webp" type="image/webp">
+
+                                <img src="media/galeria/elefantes.jpg"
+                                    alt="Dos elefantes africanos caminando por la sabana"
+                                    title="Elefantes en la sabana africana" loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- AVE -->
+                        <li class="galeria__item galeria__item--ave">
+                            <picture>
+                                <source srcset="media/galeria/ave-sabana.avif" type="image/avif"
+                                    media="(min-width: 0px)">
+                                <source srcset="media/galeria/ave-sabana.webp" type="image/webp">
+
+                                <img src="media/galeria/ave-sabana.jpg"
+                                    alt="Ave africana caminando entre la vegetación seca de la sabana"
+                                    title="Ave en la sabana africana" loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- GORILA -->
+                        <li class="galeria__item galeria__item--gorila">
+                            <picture>
+                                <source srcset="media/galeria/gorila.avif" type="image/avif" media="(min-width: 0px)">
+                                <source srcset="media/galeria/gorila.webp" type="image/webp">
+
+                                <img src="media/galeria/gorila.jpg"
+                                    alt="Gorila descansando entre la vegetación africana"
+                                    title="Gorila entre la vegetación" loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- GUEPARDO -->
+                        <li class="galeria__item galeria__item--guepardo">
+                            <picture>
+                                <source srcset="media/galeria/guepardo.avif" type="image/avif" media="(min-width: 0px)">
+                                <source srcset="media/galeria/guepardo.webp" type="image/webp">
+
+                                <img src="media/galeria/guepardo.jpg"
+                                    alt="Guepardo descansando entre la hierba seca de la sabana"
+                                    title="Guepardo en la sabana" loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- LEÓN -->
+                        <li class="galeria__item galeria__item--leon">
+                            <picture>
+                                <source srcset="media/galeria/leon.avif" type="image/avif" media="(min-width: 0px)">
+                                <source srcset="media/galeria/leon.webp" type="image/webp">
+
+                                <img src="media/galeria/leon.jpg" alt="León africano observando la sabana de perfil"
+                                    title="León africano" loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- SURICATA -->
+                        <li class="galeria__item galeria__item--suricata">
+                            <picture>
+                                <source srcset="media/galeria/suricata.avif" type="image/avif" media="(min-width: 0px)">
+                                <source srcset="media/galeria/suricata.webp" type="image/webp">
+
+                                <img src="media/galeria/suricata.jpg" alt="Suricata erguida observando el paisaje"
+                                    title="Suricata en la sabana" loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- JIRAFA -->
+                        <li class="galeria__item galeria__item--jirafa">
+                            <picture>
+                                <source srcset="media/galeria/jirafa.avif" type="image/avif" media="(min-width: 0px)">
+                                <source srcset="media/galeria/jirafa.webp" type="image/webp">
+
+                                <img src="media/galeria/jirafa.jpg"
+                                    alt="Jirafa africana en primer plano bajo el cielo azul" title="Jirafa africana"
+                                    loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- SAFARI -->
+                        <li class="galeria__item galeria__item--safari">
+                            <picture>
+                                <source srcset="media/galeria/safari-elefante.avif" type="image/avif"
+                                    media="(min-width: 0px)">
+                                <source srcset="media/galeria/safari-elefante.webp" type="image/webp">
+
+                                <img src="media/galeria/safari-elefante.jpg"
+                                    alt="Elefante acercándose a un vehículo durante un safari privado"
+                                    title="Encuentro con elefante durante un safari" loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- CEBRAS -->
+                        <li class="galeria__item galeria__item--cebras">
+                            <picture>
+                                <source srcset="media/galeria/cebras.avif" type="image/avif" media="(min-width: 0px)">
+                                <source srcset="media/galeria/cebras.webp" type="image/webp">
+
+                                <img src="media/galeria/cebras.jpg"
+                                    alt="Dos cebras caminando juntas por la sabana africana" title="Cebras en la sabana"
+                                    loading="lazy">
+                            </picture>
+                        </li>
+
+                        <!-- GLOBO -->
+                        <li class="galeria__item galeria__item--globo">
+                            <picture>
+                                <source srcset="media/galeria/globo.avif" type="image/avif" media="(min-width: 0px)">
+                                <source srcset="media/galeria/globo.webp" type="image/webp">
+
+                                <img src="media/galeria/globo.jpg"
+                                    alt="Globo aerostático volando sobre la sabana africana al amanecer"
+                                    title="Vuelo en globo sobre la sabana" loading="lazy">
+                            </picture>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <!-- /GALLERIA INTRO -->
+            <!-- /GALERIA -->
 
+            <!-- CTA FINAL -->
+            <section class="section">
+                <div class="cta__block cta__gallery block">
+                    <div class="adventures__head experiences__head">
+                        <span class="title-sm">El siguiente paso</span>
+                        <h2>Algunas historias merecen ser vividas</h2>
+                        <p>Las imágenes capturan un instante. Nuru Safari te invita a formar parte de él.</p>
+                    </div>
 
-        <!-- GALERIA -->
-        <div class="galeria">
-            <div class="galeria__block block section">
-
-                <ul class="galeria__grid">
-
-                    <!-- ELEFANTES -->
-                    <li class="galeria__item galeria__item--elefantes">
-                        <picture>
-                            <source srcset="media/galeria/elefantes.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/elefantes.webp" type="image/webp">
-
-                            <img src="media/galeria/elefantes.jpg" alt="Dos elefantes africanos caminando por la sabana"
-                                title="Elefantes en la sabana africana" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- AVE -->
-                    <li class="galeria__item galeria__item--ave">
-                        <picture>
-                            <source srcset="media/galeria/ave-sabana.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/ave-sabana.webp" type="image/webp">
-
-                            <img src="media/galeria/ave-sabana.jpg"
-                                alt="Ave africana caminando entre la vegetación seca de la sabana"
-                                title="Ave en la sabana africana" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- GORILA -->
-                    <li class="galeria__item galeria__item--gorila">
-                        <picture>
-                            <source srcset="media/galeria/gorila.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/gorila.webp" type="image/webp">
-
-                            <img src="media/galeria/gorila.jpg" alt="Gorila descansando entre la vegetación africana"
-                                title="Gorila entre la vegetación" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- GUEPARDO -->
-                    <li class="galeria__item galeria__item--guepardo">
-                        <picture>
-                            <source srcset="media/galeria/guepardo.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/guepardo.webp" type="image/webp">
-
-                            <img src="media/galeria/guepardo.jpg"
-                                alt="Guepardo descansando entre la hierba seca de la sabana"
-                                title="Guepardo en la sabana" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- LEÓN -->
-                    <li class="galeria__item galeria__item--leon">
-                        <picture>
-                            <source srcset="media/galeria/leon.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/leon.webp" type="image/webp">
-
-                            <img src="media/galeria/leon.jpg" alt="León africano observando la sabana de perfil"
-                                title="León africano" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- SURICATA -->
-                    <li class="galeria__item galeria__item--suricata">
-                        <picture>
-                            <source srcset="media/galeria/suricata.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/suricata.webp" type="image/webp">
-
-                            <img src="media/galeria/suricata.jpg" alt="Suricata erguida observando el paisaje"
-                                title="Suricata en la sabana" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- JIRAFA -->
-                    <li class="galeria__item galeria__item--jirafa">
-                        <picture>
-                            <source srcset="media/galeria/jirafa.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/jirafa.webp" type="image/webp">
-
-                            <img src="media/galeria/jirafa.jpg" alt="Jirafa africana en primer plano bajo el cielo azul"
-                                title="Jirafa africana" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- SAFARI -->
-                    <li class="galeria__item galeria__item--safari">
-                        <picture>
-                            <source srcset="media/galeria/safari-elefante.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/safari-elefante.webp" type="image/webp">
-
-                            <img src="media/galeria/safari-elefante.jpg"
-                                alt="Elefante acercándose a un vehículo durante un safari privado"
-                                title="Encuentro con elefante durante un safari" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- CEBRAS -->
-                    <li class="galeria__item galeria__item--cebras">
-                        <picture>
-                            <source srcset="media/galeria/cebras.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/cebras.webp" type="image/webp">
-
-                            <img src="media/galeria/cebras.jpg" alt="Dos cebras caminando juntas por la sabana africana"
-                                title="Cebras en la sabana" loading="lazy">
-                        </picture>
-                    </li>
-
-                    <!-- GLOBO -->
-                    <li class="galeria__item galeria__item--globo">
-                        <picture>
-                            <source srcset="media/galeria/globo.avif" type="image/avif" media="(min-width: 0px)">
-                            <source srcset="media/galeria/globo.webp" type="image/webp">
-
-                            <img src="media/galeria/globo.jpg"
-                                alt="Globo aerostático volando sobre la sabana africana al amanecer"
-                                title="Vuelo en globo sobre la sabana" loading="lazy">
-                        </picture>
-                    </li>
-                </ul>
-            </div>
+                    <div class="cta__btn">
+                        <a class="btn btn--white font-btn" href="contacto.html" title="Solicitar reserva">Reservar mi
+                            estancia</a>
+                        <a class="btn btn--border font-btn" href="contacto.html#mapa_contacto"
+                            title="Contactar asesor">Contactar asesor</a>
+                    </div>
+                </div>
+            </section>
+            <!-- /CTA FINAL -->
         </div>
-        <!-- /GALERIA -->
-
-        <!-- CTA FINAL -->
-        <section class="section">
-            <div class="cta__block cta__gallery block">
-                <div class="adventures__head experiences__head">
-                    <span class="title-sm">El siguiente paso</span>
-                    <h2>Algunas historias merecen ser vividas</h2>
-                    <p>Las imágenes capturan un instante. Nuru Safari te invita a formar parte de él.</p>
-                </div>
-
-                <div class="cta__btn">
-                    <a class="btn btn--white font-btn" href="contacto.html" title="Solicitar reserva">Reservar mi estancia</a>
-                    <a class="btn btn--border font-btn" href="contacto.html#mapa_contacto" title="Contactar asesor">Contactar asesor</a>
-                </div>
-            </div>
-        </section>
-        <!-- /CTA FINAL -->
 
     </main>
 
-        <!-- FOOTER -->
+    <!-- FOOTER -->
 
-        <footer>
-            <div class="footer__block">
-                <div class="footer__row">
-                    <a class="footer__logo" href="index.html" title="Volver al inicio"><img src="media/compartidos/logos/logo-green.svg"
-                            alt="Nuru Safari"></a>
-                    <ul class="footer__social">
-                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Abrir Instagram"><i
-                                    class="ri-instagram-line"></i></a></li>
-                        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="Abrir TikTok"><i
-                                    class="ri-tiktok-line"></i></a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Abrir Facebook"><i
-                                    class="ri-facebook-circle-line"></i></a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="Abrir YouTube"><i
-                                    class="ri-youtube-line"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__row legal">
-                    <ul class="footer__legal">
-                        <li><a href="#" title="Política de privacidad">Política de Privacidad</a></li>
-                        <li><a href="#" title="Política de cookies">Política de Cookies</a></li>
-                        <li><a href="#" title="Aviso legal">Aviso Legal</a></li>
-                    </ul>
-                    <p>© 2026 Nuru Safari — Todos los derechos reservados.</p>
-                </div>
+    <footer>
+        <div class="footer__block">
+            <div class="footer__row">
+                <a class="footer__logo" href="index.html" title="Volver al inicio"><img
+                        src="media/compartidos/logos/logo-green.svg" alt="Nuru Safari"></a>
+                <ul class="footer__social">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                            title="Abrir Instagram"><i class="ri-instagram-line"></i></a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
+                            title="Abrir TikTok"><i class="ri-tiktok-line"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                            title="Abrir Facebook"><i class="ri-facebook-circle-line"></i></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                            title="Abrir YouTube"><i class="ri-youtube-line"></i></a></li>
+                </ul>
             </div>
-        </footer>
-        <!-- /FOOTER -->
+
+            <div class="footer__row legal">
+                <ul class="footer__legal">
+                    <li><a href="#" title="Política de privacidad">Política de Privacidad</a></li>
+                    <li><a href="#" title="Política de cookies">Política de Cookies</a></li>
+                    <li><a href="#" title="Aviso legal">Aviso Legal</a></li>
+                </ul>
+                <p>© 2026 Nuru Safari — Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
 </body>
 
 </html>
