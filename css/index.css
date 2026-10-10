@@ -39,6 +39,10 @@
 --font-body: 400 1.05rem "Plus Jakarta Sans", sans-serif;
 --font-body-small: 400 0.875rem "Plus Jakarta Sans", sans-serif;
 
+}
+
+:root {
+
 /* SPACING */
 
 --spacing-xxxl:10rem;
