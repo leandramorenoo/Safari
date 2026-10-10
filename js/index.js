@@ -226,8 +226,6 @@ function modalKeyboardHandler(e) {
 
 }
 
-
-
 // EVENTOS
 toggleMenuIcon.addEventListener('click', toggleMenuHandler)
 menuClose.addEventListener('click', closeMenuHandler)
