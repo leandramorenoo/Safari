@@ -1,4 +1,5 @@
-// LOADER LION
+// PANTALLA DE CARGA (LEON) EN INDEX
+// Inicia a los 1.5 segundos y se oculta 0.8 segundos
 
 const loader = document.getElementById('loader')
 
@@ -9,6 +10,6 @@ setTimeout(() => {
     setTimeout(() => {
         loader.style.display = 'none'
         document.body.classList.remove('loading')
-    }, 700)
+    }, 800)
 
-}, 1600)
+}, 1500)

@@ -1345,6 +1345,11 @@ h4, .title-sm {
 /* GALLERY ARRAY ESTANCIAS */
 .accomodations__gallery {
     cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: var(--color-transparent);
 }
 
 /* MODAL GALERIA */

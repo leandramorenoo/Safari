@@ -1,9 +1,12 @@
 // --------- CONSTANTES ---------
 
-// CABIAR COLOR HEADER
+// HEADER Y MENÚ
 const header = document.querySelector('.header')
+const toggleMenuIcon = document.getElementById('toggleMenuIcon')
+const menu = document.getElementById('menu')
+const menuClose = document.querySelector('.menu__close-button')
 
-// HERO GALERIA AUTOMATICA
+// IMÁGENES DEL HERO
 const heroImages = [
     {
         avif: 'media/estancias/vistas/villa.avif',
@@ -35,9 +38,7 @@ const heroWebp = document.getElementById('hero-webp')
 const heroImage = document.getElementById('hero-image')
 const timer = 1800
 
-let contador = 0
-
-// GALERIA ARRAY ESTANCIAS
+// IMÁGENES DE LAS GALERÍAS
 const galleries = {
 
     acacia: [
@@ -107,34 +108,35 @@ const modalClose = document.getElementById('modal-close')
 const modalNext = document.getElementById('modal-next')
 const modalBack = document.getElementById('modal-back')
 
+let contador = 0
 let currentGallery = []
 let count = 0
 
 // ------------- FUNCIONES ------------
 
 // MENU DESPLEGABLE
-toggleMenuIcon.addEventListener('click', e => {
+function toggleMenuHandler(e) {
     menu.classList.toggle('hidden')
     toggleMenuIcon.classList.toggle('white')
-})
+}
 
-document.querySelector('.menu__close-button').addEventListener('click', e => {
+function closeMenuHandler(e) {
     menu.classList.add('hidden')
     toggleMenuIcon.classList.remove('white')
-})
+}
 
 // CAMBIAR COLOR HEADER
-document.addEventListener('scroll', e => {
+function headerScrollHandler(e) {
     console.log(window.scrollY)
     if (window.scrollY > 320) {
         header.classList.add('sticky')
     } else {
         header.classList.remove('sticky')
     }
-})
+}
 
-//HERO GALERIA AUTOMATICA
-setInterval(() => {
+// CAMBIO AUTOMÁTICO DE IMÁGENES DEL HERO
+function changeHeroImage() {
 
     if (contador >= heroImages.length - 1) {
         contador = 0
@@ -146,25 +148,22 @@ setInterval(() => {
     heroWebp.srcset = heroImages[contador].webp
     heroImage.src = heroImages[contador].jpg
 
-}, timer)
+}
 
 
-// GALERIA ARRAY ESTANCIAS
+// FUNCIONES DE LA GALERÍA
 
-galleryImages.forEach((gallery) => {
+function openGalleryHandler(e) {
 
-    gallery.addEventListener('click', e => {
-
-        const galleryName = gallery.id
-        currentGallery = galleries[galleryName]
-        count = 0
-        modalImage.src = currentGallery[count]
-        modal.classList.remove('hidden')
-    })
-})
+    const galleryName = e.currentTarget.id
+    currentGallery = galleries[galleryName]
+    count = 0
+    modalImage.src = currentGallery[count]
+    modal.classList.remove('hidden')
+}
 
 
-modalNext.addEventListener('click', e => {
+function nextImageHandler(e) {
 
     if (count >= currentGallery.length - 1) {
         count = 0
@@ -172,10 +171,10 @@ modalNext.addEventListener('click', e => {
         count++
     }
     modalImage.src = currentGallery[count]
-})
+}
 
 
-modalBack.addEventListener('click', e => {
+function previousImageHandler(e) {
 
     if (count <= 0) {
         count = currentGallery.length - 1
@@ -183,17 +182,17 @@ modalBack.addEventListener('click', e => {
         count--
     }
     modalImage.src = currentGallery[count]
-})
+}
 
 
-modalClose.addEventListener('click', e => {
+function closeModalHandler(e) {
 
     modal.classList.add('hidden')
 
-})
+}
 
-// usar teclado 
-document.addEventListener('keydown', e => {
+// TECLADO DEL MODAL
+function modalKeyboardHandler(e) {
 
     if (modal.classList.contains('hidden')) {
         return
@@ -225,6 +224,26 @@ document.addEventListener('keydown', e => {
         modal.classList.add('hidden')
     }
 
-})
+}
 
 
+
+// EVENTOS
+toggleMenuIcon.addEventListener('click', toggleMenuHandler)
+menuClose.addEventListener('click', closeMenuHandler)
+document.addEventListener('scroll', headerScrollHandler)
+
+if (modal) {
+    galleryImages.forEach((gallery) => {
+        gallery.addEventListener('click', openGalleryHandler)
+    })
+    modalNext.addEventListener('click', nextImageHandler)
+    modalBack.addEventListener('click', previousImageHandler)
+    modalClose.addEventListener('click', closeModalHandler)
+    document.addEventListener('keydown', modalKeyboardHandler)
+}
+
+// INICIALIZACIÓN
+if (heroAvif && heroWebp && heroImage) {
+    setInterval(changeHeroImage, timer)
+}
