@@ -295,7 +295,7 @@ h4, .title-sm {
     justify-self: center;
 
     &img{
-        border-radius: none;
+        border-radius: 0;
     }
 }
 
@@ -1354,6 +1354,11 @@ h4, .title-sm {
     padding: 0;
     border: none;
     background-color: var(--color-transparent);
+    transition: opacity 0.25s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 /* MODAL GALERIA */
