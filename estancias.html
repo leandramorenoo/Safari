@@ -478,7 +478,10 @@
         <button id="modal-back" class="modal__arrow modal__arrow--back" title="Fotografía anterior" aria-label="Fotografía anterior"><i class="ri-arrow-left-line"></i></button>
 
         <div class="modal__content">
-            <img id="modal-image" src="media/estancias/refugio-acacia/refugio-acacia.webp" alt="Fotografía ampliada del alojamiento seleccionado">
+            <picture>
+                <source id="modal-source" srcset="media/estancias/refugio-acacia/refugio-acacia.webp" type="image/webp" media="(min-width: 0px)">
+                <img id="modal-image" src="media/estancias/refugio-acacia/refugio-acacia.webp" alt="Fotografía ampliada del alojamiento seleccionado" loading="lazy">
+            </picture>
         </div>
 
         <button id="modal-next" class="modal__arrow modal__arrow--next" title="Fotografía siguiente" aria-label="Fotografía siguiente"><i class="ri-arrow-right-line"></i></button>

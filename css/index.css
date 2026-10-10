@@ -1389,6 +1389,13 @@ h4, .title-sm {
     align-items: center;
 }
 
+.modal__content picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
 .modal__content img {
     width: auto;
     max-width: 100%;

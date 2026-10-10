@@ -104,6 +104,7 @@ const galleries = {
 const galleryImages = document.querySelectorAll('.accomodations__gallery')
 const modal = document.querySelector('.modal')
 const modalImage = document.getElementById('modal-image')
+const modalSource = document.getElementById('modal-source')
 const modalClose = document.getElementById('modal-close')
 const modalNext = document.getElementById('modal-next')
 const modalBack = document.getElementById('modal-back')
@@ -159,6 +160,7 @@ function openGalleryHandler(e) {
     currentGallery = galleries[galleryName]
     count = 0
     modalImage.src = currentGallery[count]
+    modalSource.srcset = currentGallery[count]
     modal.classList.remove('hidden')
 }
 
@@ -171,6 +173,7 @@ function nextImageHandler(e) {
         count++
     }
     modalImage.src = currentGallery[count]
+    modalSource.srcset = currentGallery[count]
 }
 
 
@@ -182,6 +185,7 @@ function previousImageHandler(e) {
         count--
     }
     modalImage.src = currentGallery[count]
+    modalSource.srcset = currentGallery[count]
 }
 
 
@@ -207,6 +211,7 @@ function modalKeyboardHandler(e) {
         }
 
         modalImage.src = currentGallery[count]
+        modalSource.srcset = currentGallery[count]
     }
 
     if (e.key === 'ArrowLeft') {
@@ -218,6 +223,7 @@ function modalKeyboardHandler(e) {
         }
 
         modalImage.src = currentGallery[count]
+        modalSource.srcset = currentGallery[count]
     }
 
     if (e.key === 'Escape') {
