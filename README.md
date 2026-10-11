@@ -2,6 +2,8 @@
 
 Proyecto web de un hotel safari de lujo realizado con **HTML, CSS y JavaScript básico**.
 
+[Ver la web](https://leandramorenoo.github.io/Safari/)
+
 ## Páginas
 
 - Inicio
@@ -28,7 +30,16 @@ Se han añadido funcionalidades interactivas utilizando JavaScript básico:
 - **Menú desplegable:** apertura y cierre del menú mediante un botón.
 - **Header dinámico:** cambio de estilo al hacer scroll.
 - **Hero automático:** cambio de imágenes cada 1,8 segundos.
-- **Galería de estancias:** apertura de imágenes en un modal con navegación mediante botones o las flechas del teclado. Permite cerrar con la X o la tecla Escape.
+- **Galerías de Estancias y Galería:** apertura de imágenes en un modal. Se puede navegar con los botones o las flechas del teclado y cerrar con la X o Escape. Tab permite recorrer los botones del modal.
+- **Pantalla de carga:** animación inicial en la página de Inicio.
+
+## CSS y responsive
+
+- Variables CSS y clases BEM.
+- Efectos hover y animaciones al hacer scroll.
+- Hero sticky en Galería y Experiencias.
+- Scroll horizontal en algunas secciones de pantallas pequeñas.
+- Imágenes optimizadas y carga diferida de imágenes secundarias.
 
 ## Navegación
 

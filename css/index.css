@@ -317,7 +317,7 @@ h4, .title-sm {
     max-width: var(--spacing-xxxl);
     justify-self: center;
 
-    &img{
+    & img{
         border-radius: 0;
     }
 }
@@ -761,12 +761,6 @@ h4, .title-sm {
     color: var(--color-brown);
     }
 
-   &.field--acceptance {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: var(--spacing-md);
-    }
 }
 
 .form-field input, select, textarea {
@@ -783,6 +777,13 @@ h4, .title-sm {
     &:focus {
         border-color: var(--color-green-light);
     }
+}
+
+.field--acceptance {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: var(--spacing-md);
 }
 
 .field--acceptance input {
@@ -1398,10 +1399,6 @@ h4, .title-sm {
         height: 25rem;
     }
 
-    .premium__villas .intro__content {
-        gap: var(--spacing-xs);
-    }
-
     .contact__block {
         gap: var(--spacing-lg);
     }
@@ -1656,8 +1653,14 @@ h4, .title-sm {
 
 .scroll-cutLeft {
     margin: 0 auto;
-    animation: cutLeft 1s linear 1 forwards;
-    animation-timeline: view(block 60% 0%);  
+}
+
+/* ANIMACIÓN SI EL NAVEGADOR LA SOPORTA (clip-path)*/
+@supports (animation-timeline: view(block 60% 0%)) {
+    .scroll-cutLeft {
+        animation: cutLeft 1s linear 1 forwards;
+        animation-timeline: view(block 60% 0%);
+    }
 }
 /* /ANIMATIONS SCROLL */
 

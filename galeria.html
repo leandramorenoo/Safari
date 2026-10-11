@@ -312,7 +312,7 @@
     </footer>
     <!-- /FOOTER -->
     <!-- MODAL IMAGES GALLERY -->
-    <div class="modal hidden">
+    <div class="modal hidden" role="dialog" aria-modal="true" aria-label="Galería de fotografías">
 
         <button id="modal-close" class="modal__close" title="Cerrar fotografía" aria-label="Cerrar fotografía"><i
                 class="ri-close-line"></i></button>
@@ -322,7 +322,8 @@
 
         <div class="modal__content">
             <picture>
-                <source id="modal-avif" srcset="media/galeria/elefantes.avif" type="image/avif" media="(min-width: 0px)">
+                <source id="modal-avif" srcset="media/galeria/elefantes.avif" type="image/avif"
+                    media="(min-width: 0px)">
                 <source id="modal-source" srcset="media/galeria/elefantes.webp" type="image/webp"
                     media="(min-width: 0px)">
                 <img id="modal-image" src="media/galeria/elefantes.jpg" alt="Fotografía ampliada de la galería Nuru"

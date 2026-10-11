@@ -127,6 +127,7 @@ const modalBack = document.getElementById('modal-back')
 let contador = 0
 let currentGallery = []
 let count = 0
+let galleryButton = null
 
 // ------------- FUNCIONES ------------
 
@@ -171,6 +172,7 @@ function changeHeroImage() {
 
 function openGalleryHandler(e) {
 
+    galleryButton = e.currentTarget
     const galleryName = e.currentTarget.id
     currentGallery = galleries[galleryName]
     count = 0
@@ -178,16 +180,19 @@ function openGalleryHandler(e) {
     modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
     modalSource.srcset = currentGallery[count]
     modal.classList.remove('hidden')
+    modalClose.focus()
 }
 
 
 function openPageGalleryHandler(e) {
+    galleryButton = e.currentTarget
     currentGallery = galleries.galeria
     count = Number(e.currentTarget.dataset.index)
     modalImage.src = currentGallery[count].replace('.webp', '.jpg')
     modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
     modalSource.srcset = currentGallery[count]
     modal.classList.remove('hidden')
+    modalClose.focus()
 }
 
 
@@ -220,6 +225,9 @@ function previousImageHandler(e) {
 function closeModalHandler(e) {
 
     modal.classList.add('hidden')
+    if (galleryButton) {
+        galleryButton.focus()
+    }
 
 }
 
@@ -228,6 +236,16 @@ function modalKeyboardHandler(e) {
 
     if (modal.classList.contains('hidden')) {
         return
+    }
+
+    if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === modalClose) {
+            e.preventDefault()
+            modalNext.focus()
+        } else if (!e.shiftKey && document.activeElement === modalNext) {
+            e.preventDefault()
+            modalClose.focus()
+        }
     }
 
     if (e.key === 'ArrowRight') {
@@ -257,7 +275,7 @@ function modalKeyboardHandler(e) {
     }
 
     if (e.key === 'Escape') {
-        modal.classList.add('hidden')
+        closeModalHandler(e)
     }
 
 }
