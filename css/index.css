@@ -33,7 +33,7 @@
 
 /* FONTS */
 
---font-title-xl: 400 clamp(3rem, 5vw, 5.5rem) "DM Serif Display", serif;
+--font-title-xl: 400 clamp(2.7rem, 5vw, 5.5rem) "DM Serif Display", serif;
 --font-title-lg: 400 clamp(2rem, 4vw, 3.5rem) "DM Serif Display", serif;
 --font-title-md: 400 clamp(1.25rem, 2vw, 1.5rem) "DM Serif Display", serif;
 --font-title-sm: 500 0.9rem "Plus Jakarta Sans", sans-serif;
@@ -123,6 +123,20 @@ a {
     text-decoration: none;
     color: inherit;
     font: var(--font-body-small);
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+button {
+    &:active {
+        opacity: 0.7;
+    }
 }
 
 ul, ol {
@@ -207,6 +221,10 @@ h4, .title-sm {
         transform: scale(1.05);
     }
 
+    &:active {
+        transform: scale(0.98);
+    }
+
     &.btn--border {
         background-color: var(--color-transparent);
         border: 1px solid var(--color-cream);
@@ -218,7 +236,7 @@ h4, .title-sm {
         }
     }
 
-    &.btn--border--green {
+    &.btn--border-green {
         background-color: var(--color-transparent);
         border: 1px solid var(--color-green-dark);
         color: var(--color-green-dark);
@@ -683,6 +701,12 @@ h4, .title-sm {
     }
 }
 
+.icons__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
 .icons__row {
     display: flex;
     color: inherit;
@@ -754,8 +778,17 @@ h4, .title-sm {
     font: var(--font-body);
     outline: none;
 
+    &:hover,
+    &:active,
     &:focus {
         border-color: var(--color-green-light);
+    }
+}
+
+.field--acceptance input {
+    &:hover,
+    &:active {
+        outline: 1px solid var(--color-green-light);
     }
 }
 
@@ -1008,9 +1041,10 @@ h4, .title-sm {
     }
 }
 
-.hero__content__experiencias {
+.hero__content--experiencias {
 
     width: 100%;
+    max-width: none;
     padding: var(--spacing-sm);
     color: var(--color-cream);
     text-align: start;
@@ -1189,6 +1223,10 @@ h4, .title-sm {
                 opacity: 0.7;
             }
         }
+
+        &:active {
+            opacity: 0.6;
+        }
     }
 
     & picture {
@@ -1272,6 +1310,7 @@ h4, .title-sm {
 
 /* ----- RESPONSIVE ------*/
 
+/* Ajustes para tablet en estancias*/
 @media (min-width: 641px) and (hover: hover) and (pointer: fine) {
     .adventures .adventures__item {
         border-radius: var(--radius-sm);
@@ -1307,9 +1346,9 @@ h4, .title-sm {
     }
 }
 
-/* Tablet */
+/* Tablet general*/
 @media (max-width: 640px) {
-
+    
 .section,
     .estancias {
         padding: var(--spacing-md) var(--spacing-sm);
@@ -1430,6 +1469,10 @@ h4, .title-sm {
 
     &:hover {
         opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.6;
     }
 }
 
@@ -1558,6 +1601,10 @@ h4, .title-sm {
 }
 
 @media (max-width: 1024px) {
+    .experiences .adventures__video-title {
+        animation: none;
+    }
+
     .scroll-fadein,
     .scroll-fadein-section {
         animation: none;
