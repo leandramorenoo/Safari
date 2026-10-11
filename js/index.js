@@ -98,10 +98,24 @@ const galleries = {
         'media/estancias/suite-kilimanjaro/suite-kilimanjaro-habitacion.webp',
         'media/estancias/suite-kilimanjaro/suite-kilimanjaro-ducha.webp',
         'media/estancias/suite-kilimanjaro/suite-kilimanjaro-sala.webp'
+    ],
+
+    galeria: [
+        'media/galeria/elefantes.webp',
+        'media/galeria/ave-sabana.webp',
+        'media/galeria/gorila.webp',
+        'media/galeria/guepardo.webp',
+        'media/galeria/leon.webp',
+        'media/galeria/suricata.webp',
+        'media/galeria/jirafa.webp',
+        'media/galeria/safari-elefante.webp',
+        'media/galeria/cebras.webp',
+        'media/galeria/globo.webp'
     ]
 }
 
 const galleryImages = document.querySelectorAll('.accomodations__gallery')
+const pageGalleryButtons = document.querySelectorAll('.galeria__item button')
 const modal = document.querySelector('.modal')
 const modalImage = document.getElementById('modal-image')
 const modalSource = document.getElementById('modal-source')
@@ -159,6 +173,15 @@ function openGalleryHandler(e) {
     const galleryName = e.currentTarget.id
     currentGallery = galleries[galleryName]
     count = 0
+    modalImage.src = currentGallery[count]
+    modalSource.srcset = currentGallery[count]
+    modal.classList.remove('hidden')
+}
+
+
+function openPageGalleryHandler(e) {
+    currentGallery = galleries.galeria
+    count = Number(e.currentTarget.dataset.index)
     modalImage.src = currentGallery[count]
     modalSource.srcset = currentGallery[count]
     modal.classList.remove('hidden')
@@ -238,6 +261,9 @@ menuClose.addEventListener('click', closeMenuHandler)
 document.addEventListener('scroll', headerScrollHandler)
 
 if (modal) {
+    pageGalleryButtons.forEach((button) => {
+        button.addEventListener('click', openPageGalleryHandler)
+    })
     galleryImages.forEach((gallery) => {
         gallery.addEventListener('click', openGalleryHandler)
     })
