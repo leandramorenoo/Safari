@@ -1,15 +1,6 @@
 @keyframes appear {
-    from {
-        opacity: 0;
-        filter: blur(10px);
-        transform: translateY(1rem);
-    }
-
-    to {
-        opacity: 1;
-        filter: blur(0px);
-        transform: translateY(0rem);
-    }
+    from {opacity: 0; filter: blur(3px); transform: translateY(1rem);}
+    to {opacity: 1; filter: blur(0px); transform: translateY(0rem);}
 }
 
 @keyframes fadein {
@@ -1299,6 +1290,23 @@ h4, .title-sm {
     }
 }
 
+@media (min-width: 641px) and (max-width: 900px) {
+    .premium__villas .intro__content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .premium__villas .intro__img,
+    .premium__villas .accomodations__info {
+        flex: none;
+        width: 100%;
+    }
+
+    #retiro_luna .intro__img {
+        order: -1;
+    }
+}
+
 /* Tablet */
 @media (max-width: 640px) {
 
@@ -1322,6 +1330,7 @@ h4, .title-sm {
         grid-row: auto;
     }
     .adventures .adventures__row,
+    .experiences .adventures__row,
     .opc-safari__row {
         grid-template-columns: none;
         grid-auto-flow: column;
@@ -1331,9 +1340,15 @@ h4, .title-sm {
     }
 
     .adventures .adventures__item,
+    .experiences .adventures__item,
     .opc-safari__item {
         min-width: 0;
         scroll-snap-align: start;
+    }
+
+    .opc-safari__row {
+        grid-auto-columns: 65%;
+        gap: var(--spacing-xs);
     }
 
     .opc-safari__picture {
@@ -1514,8 +1529,15 @@ h4, .title-sm {
         .onAppear .estancias__head p,
         .onAppear .accomodations__info h2,
         .onAppear .accomodations__info h3,
-        .onAppear .accomodations__info p,
-        .onAppear .accomodations__gallery img {
+        .onAppear .accomodations__gallery img,
+        .accomodations.onAppear h2,
+        .accomodations.onAppear p,
+        .accomodations.onAppear span,
+        .accomodations.onAppear img,
+        .formulario.onAppear .estancias__head span,
+        .map.onAppear .map__info h2,
+        .map.onAppear .map__info p,
+        .map.onAppear .map__info span {
             animation-name: appear;
             animation-duration: 1ms;
             animation-timeline: view(block 90% 0%);
@@ -1533,6 +1555,50 @@ h4, .title-sm {
 .scroll-fadein-section {
     animation: fadein-section 1s linear 1 forwards;
     animation-timeline: view(block 99% 0%);
+}
+
+@media (max-width: 1024px) {
+    .scroll-fadein,
+    .scroll-fadein-section {
+        animation: none;
+    }
+
+    .hero--celebracion.scroll-fadein-section {
+        overflow: clip;
+    }
+
+    .hero--celebracion .hero__picture img {
+        object-position: 60% center;
+    }
+
+    @supports (animation-timeline: view()) {
+        @media (prefers-reduced-motion: no-preference) {
+            .scroll-fadein h1,
+            .scroll-fadein h2,
+            .scroll-fadein h3,
+            .scroll-fadein p,
+            .scroll-fadein span,
+            .scroll-fadein .intro__img img,
+            .scroll-fadein-section h1,
+            .scroll-fadein-section h2,
+            .scroll-fadein-section h3,
+            .scroll-fadein-section p,
+            .scroll-fadein-section span,
+            .scroll-fadein-section .experiences__img img {
+                animation-name: appear;
+                animation-duration: 1ms;
+                animation-timeline: view(block 90% 0%);
+                animation-timing-function: linear;
+                animation-fill-mode: both;
+            }
+
+            .hero--celebracion.scroll-fadein-section h2,
+            .hero--celebracion.scroll-fadein-section p,
+            .hero--celebracion.scroll-fadein-section span {
+                animation-timeline: view(block 70% 0%);
+            }
+        }
+    }
 }
 
 .scroll-go-big {
