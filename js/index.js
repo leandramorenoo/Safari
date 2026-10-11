@@ -118,6 +118,7 @@ const galleryImages = document.querySelectorAll('.accomodations__gallery')
 const pageGalleryButtons = document.querySelectorAll('.galeria__item button')
 const modal = document.querySelector('.modal')
 const modalImage = document.getElementById('modal-image')
+const modalAvif = document.getElementById('modal-avif')
 const modalSource = document.getElementById('modal-source')
 const modalClose = document.getElementById('modal-close')
 const modalNext = document.getElementById('modal-next')
@@ -173,7 +174,8 @@ function openGalleryHandler(e) {
     const galleryName = e.currentTarget.id
     currentGallery = galleries[galleryName]
     count = 0
-    modalImage.src = currentGallery[count]
+    modalImage.src = currentGallery[count].replace('.webp', '.jpg')
+    modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
     modalSource.srcset = currentGallery[count]
     modal.classList.remove('hidden')
 }
@@ -182,7 +184,8 @@ function openGalleryHandler(e) {
 function openPageGalleryHandler(e) {
     currentGallery = galleries.galeria
     count = Number(e.currentTarget.dataset.index)
-    modalImage.src = currentGallery[count]
+    modalImage.src = currentGallery[count].replace('.webp', '.jpg')
+    modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
     modalSource.srcset = currentGallery[count]
     modal.classList.remove('hidden')
 }
@@ -195,7 +198,8 @@ function nextImageHandler(e) {
     } else {
         count++
     }
-    modalImage.src = currentGallery[count]
+    modalImage.src = currentGallery[count].replace('.webp', '.jpg')
+    modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
     modalSource.srcset = currentGallery[count]
 }
 
@@ -207,7 +211,8 @@ function previousImageHandler(e) {
     } else {
         count--
     }
-    modalImage.src = currentGallery[count]
+    modalImage.src = currentGallery[count].replace('.webp', '.jpg')
+    modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
     modalSource.srcset = currentGallery[count]
 }
 
@@ -233,7 +238,8 @@ function modalKeyboardHandler(e) {
             count++
         }
 
-        modalImage.src = currentGallery[count]
+        modalImage.src = currentGallery[count].replace('.webp', '.jpg')
+        modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
         modalSource.srcset = currentGallery[count]
     }
 
@@ -245,7 +251,8 @@ function modalKeyboardHandler(e) {
             count--
         }
 
-        modalImage.src = currentGallery[count]
+        modalImage.src = currentGallery[count].replace('.webp', '.jpg')
+        modalAvif.srcset = currentGallery[count].replace('.webp', '.avif')
         modalSource.srcset = currentGallery[count]
     }
 

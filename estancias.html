@@ -91,7 +91,7 @@
     <!-- /HERO -->
 
     <!-- /ACCOMODATIONS FULL -->
-    <section class="estancias">
+    <section class="estancias onAppear">
         <div class="estancias__block">
             <div class="estancias__head">
                 <span class="head-green-light">Alojamientos Nuru</span>
@@ -293,7 +293,7 @@
 
     <!-- ACCOMODATIONS PREMIUM -->
 
-    <section class="premium">
+    <section class="premium onAppear">
         <div class="premium__block block section">
             <div class="estancias__head">
                 <span class="head-green-light">Alojamientos exclusivos</span>
@@ -531,9 +531,10 @@
 
         <div class="modal__content">
             <picture>
+                <source id="modal-avif" srcset="media/estancias/refugio-acacia/refugio-acacia.avif" type="image/avif" media="(min-width: 0px)">
                 <source id="modal-source" srcset="media/estancias/refugio-acacia/refugio-acacia.webp" type="image/webp"
                     media="(min-width: 0px)">
-                <img id="modal-image" src="media/estancias/refugio-acacia/refugio-acacia.webp"
+                <img id="modal-image" src="media/estancias/refugio-acacia/refugio-acacia.jpg"
                     alt="Fotografía ampliada del alojamiento seleccionado" loading="lazy">
             </picture>
         </div>
