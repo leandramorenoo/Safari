@@ -123,6 +123,7 @@ const modalSource = document.getElementById('modal-source')
 const modalClose = document.getElementById('modal-close')
 const modalNext = document.getElementById('modal-next')
 const modalBack = document.getElementById('modal-back')
+const reservationForms = document.querySelectorAll('.contact__form form')
 
 let contador = 0
 let currentGallery = []
@@ -140,6 +141,12 @@ function toggleMenuHandler(e) {
 function closeMenuHandler(e) {
     menu.classList.add('hidden')
     toggleMenuIcon.classList.remove('white')
+}
+
+// RECARGAR FORMULARIO
+function formSubmitHandler(e) {
+    e.preventDefault()
+    window.location.reload()
 }
 
 // CAMBIAR COLOR HEADER
@@ -284,6 +291,10 @@ function modalKeyboardHandler(e) {
 toggleMenuIcon.addEventListener('click', toggleMenuHandler)
 menuClose.addEventListener('click', closeMenuHandler)
 document.addEventListener('scroll', headerScrollHandler)
+
+reservationForms.forEach((form) => {
+    form.addEventListener('submit', formSubmitHandler)
+})
 
 if (modal) {
     pageGalleryButtons.forEach((button) => {
